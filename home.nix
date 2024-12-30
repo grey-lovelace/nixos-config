@@ -132,7 +132,7 @@
 
     # set some aliases, feel free to add more or remove some
     shellAliases = {
-      nixr="sudo nixos-rebuild switch";
+      # nixr="sudo nixos-rebuild switch";
       ls="ls -ACHG --color $*";
       gw="./gradlew $*";
       gboot="./gradlew bootRun";
@@ -141,6 +141,13 @@
       gc="git commit -m $*";
     };
     initExtra = ''
+      nixr() {
+          cd ~/nixos-config
+          git add .
+          git commit -m $*
+          git push
+      }
+
       gitDeleteAllLocalButCurrent() {
           currentBranch=$(git branch --show-current)
           echo "Deleting all branches but $currentBranch"
