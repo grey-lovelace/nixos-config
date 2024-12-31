@@ -93,7 +93,8 @@
     { domain = "@audio"; item = "nofile"; type = "hard"; value = "99999"; }
   ];
 
-
+  # TODO: Figure out how to only get a couple of nerd fonts
+  fonts.packages = with pkgs; [ nerdfonts ];
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
     neofetch
