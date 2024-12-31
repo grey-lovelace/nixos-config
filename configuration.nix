@@ -5,7 +5,7 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
       ./hardware-configuration-base.nix 
       ./kanata.nix
@@ -92,7 +92,6 @@
     { domain = "@audio"; item = "nofile"; type = "soft"; value = "99999"; }
     { domain = "@audio"; item = "nofile"; type = "hard"; value = "99999"; }
   ];
-
 
 
   # List packages installed in system profile. To search, run:
