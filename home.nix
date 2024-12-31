@@ -73,6 +73,10 @@
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "appmenu:minimize,maximize,close";
     };
+    "org/gnome/desktop/interface" = {
+      monospace-font-name = "MesloLGM Nerd Font Mono 10";
+    };
+
     "org/gnome/nautilus/preferences" = {
       default-folder-viewer="list-view";
       migrated-gtk-settings=true;
@@ -168,7 +172,7 @@
                   "properties": {
                     "folder_icon": "\uf115",
                     "folder_separator_icon": " \ue0b1 ",
-                    "home_icon": "\uf02dc",
+                    "home_icon": "\uf015",
                     "style": "full"
                   },
                   "style": "powerline",
