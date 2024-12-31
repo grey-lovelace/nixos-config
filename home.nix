@@ -168,7 +168,7 @@
                   "properties": {
                     "folder_icon": "\uf115",
                     "folder_separator_icon": " \ue0b1 ",
-                    "home_icon": "\uf7db",
+                    "home_icon": "\uf02dc",
                     "style": "full"
                   },
                   "style": "powerline",
