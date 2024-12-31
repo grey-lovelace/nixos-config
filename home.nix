@@ -48,6 +48,7 @@
       switch-input-source-backward=[];
       switch-to-workspace-left=["<Control><Super>Left"];
       switch-to-workspace-right=["<Control><Super>Right"];
+      toggle-message-tray=[];
     };
     "org/gnome/settings-daemon/plugins/media-keys" = {
       home = ["<Super>e"];
@@ -122,7 +123,11 @@
       col-3=2;
       show-tiles=["<Super>space"];
     };
-
+    "org/gnome/shell/extensions/clipboard-indicator" = {
+      strip-text=true;
+      move-item-first=true;
+      toggle-menu=["<Super>v"];
+    };
   };
 
   programs.git = {
