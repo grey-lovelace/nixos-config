@@ -93,22 +93,28 @@
     { domain = "@audio"; item = "nofile"; type = "hard"; value = "99999"; }
   ];
 
-  # TODO: Figure out how to only get a couple of nerd fonts
-  fonts.packages = with pkgs; [ nerdfonts ];
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "Meslo" ]; })
+  ];
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
+    # terminal tools
     neofetch
+    dconf
+    wget
+
+    # developer tools
     git
     nodejs_23
     deno
     jdk23
     python314
     poetry
-    dconf
     vscode
-    wget
     awscli2
     aws-sam-cli
+
+    # apps
     chromium
     obs-studio
     slack
@@ -117,8 +123,12 @@
     gimp
     blender
     godot_4
+
+    # gnome
     gnome-extension-manager
     gnome-tweaks
+
+    # gnome extensions
     gnomeExtensions.blur-my-shell
     gnomeExtensions.burn-my-windows
     gnomeExtensions.desktop-cube
