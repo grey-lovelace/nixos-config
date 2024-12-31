@@ -154,7 +154,9 @@
       nixr() {
         cd ~/nixos-config
         git add .
-        git commit -m "nixos-config update"
+        echo "Enter Commit Message:"
+        read commitMessage
+        git commit -m "$commitMessage"
         git push
         sudo nixos-rebuild switch
       }
