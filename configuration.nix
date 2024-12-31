@@ -110,6 +110,7 @@
     jdk23
     python314
     poetry
+    stdenv.cc.cc.lib
     vscode
     awscli2
     aws-sam-cli
