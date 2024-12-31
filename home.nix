@@ -89,7 +89,7 @@
         "tactile@lundal.io"
         "vscode-search-provider@mrmarble.github.com"
         "desktop-cube@schneegans.github.com"
-        "clipboard-indicator@tudmoto.com"
+        "clipboard-indicator@tudmotu.com"
         "display-configuration-switcher@knokelmaat.gitlab.com"
       ];
     };
