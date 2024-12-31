@@ -40,6 +40,10 @@
       two-finger-scrolling-enabled=true;
     };
     "org/gnome/desktop/wm/keybindings" = {
+      switch-applications=[];
+      switch-applications-backwards=[];
+      switch-windows=["<Alt>Tab"];
+      switch-windows-backwards=["<Shift><Alt>Tab"];
       switch-input-source=[];
       switch-input-source-backward=[];
       switch-to-workspace-left=["<Control><Super>Left"];
@@ -50,6 +54,9 @@
     };
     "org/gnome/mutter" = {
       center-new-windows=true;
+    };
+    "org/gnome/shell" = {
+      favorite-apps=[];
     };
     "org/gnome/shell/app-switcher" = {
       current-workspace-only=true;
@@ -62,6 +69,9 @@
         "org.gnome.clocks.desktop"
         "org.gnome.Epiphany.desktop"
       ];
+    };
+    "org/gnome/desktop/wm/preferences" = {
+      button-layout = "appmenu:minimize,maximize,close";
     };
     "org/gnome/nautilus/preferences" = {
       default-folder-viewer="list-view";
@@ -142,29 +152,30 @@
     };
     initExtra = ''
       nixr() {
-          cd ~/nixos-config
-          git add .
-          git commit -m $*
-          git push
+        cd ~/nixos-config
+        git add .
+        git commit -m "nixos-config update"
+        git push
+        sudo nixos-rebuild switch
       }
 
       gitDeleteAllLocalButCurrent() {
-          currentBranch=$(git branch --show-current)
-          echo "Deleting all branches but $currentBranch"
-          git branch | grep -v "$currentBranch" | xargs git branch -D
+        currentBranch=$(git branch --show-current)
+        echo "Deleting all branches but $currentBranch"
+        git branch | grep -v "$currentBranch" | xargs git branch -D
       }
 
       github() {
-          tempurl=$(git remote get-url origin)
-          tempurl=$(echo $tempurl | sed "s/git@/https:\/\//" )
-          tempurl=$(echo $tempurl | sed "s/.com:/.com\//" )
-          echo Opening $tempurl...
-          xdg-open $tempurl
+        tempurl=$(git remote get-url origin)
+        tempurl=$(echo $tempurl | sed "s/git@/https:\/\//" )
+        tempurl=$(echo $tempurl | sed "s/.com:/.com\//" )
+        echo Opening $tempurl...
+        xdg-open $tempurl
       }
 
       gitrap(){
-          git branch -m $1
-          git push -u origin $1
+        git branch -m $1
+        git push -u origin $1
       }
     '';
   };
