@@ -152,13 +152,13 @@
     };
     initExtra = ''
       nixr() {
+        sudo nixos-rebuild switch
         cd ~/nixos-config
         git add .
         echo "Enter Commit Message:"
         read commitMessage
         git commit -m "$commitMessage"
         git push
-        sudo nixos-rebuild switch
       }
 
       gitDeleteAllLocalButCurrent() {
