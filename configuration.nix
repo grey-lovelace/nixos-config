@@ -117,7 +117,6 @@
     gimp
     blender
     godot_4
-    z-lua
     gnome-extension-manager
     gnome-tweaks
     gnomeExtensions.blur-my-shell
