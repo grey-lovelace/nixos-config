@@ -165,9 +165,9 @@
     };
     initExtra = ''
       nixr() {
+        git add .
         sudo nixos-rebuild switch
         cd ~/nixos-config
-        git add .
         echo "Enter Commit Message:"
         read commitMessage
         git commit -m "$commitMessage"
