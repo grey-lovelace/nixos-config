@@ -115,6 +115,7 @@
     vscode
     awscli2
     aws-sam-cli
+    gnumake
 
     # apps
     chromium
