@@ -53,7 +53,7 @@
       switch-to-workspace-left=["<Control><Super>Left"];
       switch-to-workspace-right=["<Control><Super>Right"];
       toggle-message-tray=[];
-      show-screenshot-ui=["<Control><Super>s"]
+      show-screenshot-ui=["<Control><Super>s"];
     };
     "org/gnome/settings-daemon/plugins/media-keys" = {
       home = ["<Super>e"];
