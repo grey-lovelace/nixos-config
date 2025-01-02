@@ -116,6 +116,7 @@
     awscli2
     aws-sam-cli
     gnumake
+    bruno
 
     # apps
     chromium
