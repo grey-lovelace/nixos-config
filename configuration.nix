@@ -102,6 +102,7 @@
     neofetch
     dconf
     wget
+    wl-clipboard
 
     # developer tools
     git
