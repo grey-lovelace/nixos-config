@@ -127,6 +127,7 @@
     gimp
     blender
     godot_4
+    discord
 
     # gnome
     gnome-extension-manager
