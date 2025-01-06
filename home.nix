@@ -88,9 +88,6 @@
       search-filter-time-type="last_modified";
     };
     "org/gnome/shell" = {
-      keybindings={
-        show-screenshot-ui=["<Control><Super>s"];
-      };
       enabled-extensions=[
         "blur-my-shell@aunetx"
         "burn-my-windows@schneegans.github.com"
@@ -100,6 +97,9 @@
         "clipboard-indicator@tudmotu.com"
         "display-configuration-switcher@knokelmaat.gitlab.com"
       ];
+    };
+    "org/gnome/shell/keybindings" = {
+      show-screenshot-ui=["<Control><Super>s"];
     };
     "org/gnome/shell/extensions/blur-my-shell/appfolder" = {
       brightness=0.6;
@@ -169,8 +169,8 @@
     initExtra = ''
       nixr() {
         git add .
-        sudo nixos-rebuild switch
         cd ~/nixos-config
+        sudo nixos-rebuild switch --flake .
         echo "Enter Commit Message:"
         read commitMessage
         git commit -m "$commitMessage"
