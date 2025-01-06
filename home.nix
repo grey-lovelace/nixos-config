@@ -53,7 +53,6 @@
       switch-to-workspace-left=["<Control><Super>Left"];
       switch-to-workspace-right=["<Control><Super>Right"];
       toggle-message-tray=[];
-      show-screenshot-ui=["<Control><Super>s"];
     };
     "org/gnome/settings-daemon/plugins/media-keys" = {
       home = ["<Super>e"];
@@ -89,6 +88,9 @@
       search-filter-time-type="last_modified";
     };
     "org/gnome/shell" = {
+      keybindings={
+        show-screenshot-ui=["<Control><Super>s"];
+      };
       enabled-extensions=[
         "blur-my-shell@aunetx"
         "burn-my-windows@schneegans.github.com"
