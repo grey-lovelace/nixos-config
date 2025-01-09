@@ -103,6 +103,7 @@
     dconf
     wget
     wl-clipboard
+    lshw
 
     # developer tools
     git
