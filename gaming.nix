@@ -10,6 +10,6 @@
     };
 
     environment.systemPackages = with pkgs; [
-        heroic # install heroic launcher
+        heroic
     ];
 }
