@@ -9,6 +9,7 @@
       ./hardware-configuration.nix
       ./hardware-configuration-base.nix 
       ./kanata.nix
+      ./nvidia.nix
     ];
 
   # Allow unfree packages
@@ -53,7 +54,7 @@
 
   # Enable the X11 windowing system.
   #  services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "amdgpu" ];
+  services.xserver.videoDrivers = [ "amdgpu" "nvidia" ];
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
