@@ -99,10 +99,8 @@
     (nerdfonts.override { fonts = [ "Meslo" ]; })
   ];
   # List packages installed in system profile. To search, run:
-  nixpkgs.config = {
-    chromium = {
-      enableWideVine = true;
-    };
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
   };
   environment.systemPackages = with pkgs; [
     # terminal tools
@@ -127,7 +125,7 @@
     bruno
 
     # apps
-    chromium
+    (chromium.override { enableWideVine = true; })
     obs-studio
     slack
     ardour
