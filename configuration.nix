@@ -99,6 +99,11 @@
     (nerdfonts.override { fonts = [ "Meslo" ]; })
   ];
   # List packages installed in system profile. To search, run:
+  nixpkgs.config = {
+    chromium = {
+      enableWideVine = true;
+    };
+  };
   environment.systemPackages = with pkgs; [
     # terminal tools
     neofetch
