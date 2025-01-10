@@ -10,6 +10,7 @@
       ./hardware-configuration-base.nix 
       ./kanata.nix
       ./nvidia.nix
+      ./gaming.nix
     ];
 
   # Allow unfree packages
