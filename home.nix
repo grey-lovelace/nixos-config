@@ -202,7 +202,7 @@
     chromium-personal = {
       name = "Personal (Chrome)";
       genericName = "Web Browser";
-      exec = "chromium --new-window --profile-directory=\"Default\"";
+      exec = "chromium --new-window --profile-directory=\"Default\" --ozone-platform=wayland";
       terminal = false;
       categories = [ "Application" "Network" "WebBrowser" ];
       mimeType = [ "text/html" "text/xml" ];
@@ -210,7 +210,7 @@
     chromium-source-allies = {
       name = "Source Allies (Chrome)";
       genericName = "Web Browser";
-      exec = "chromium --new-window --profile-directory=\"Profile 1\"";
+      exec = "chromium --new-window --profile-directory=\"Profile 1\" --ozone-platform=wayland";
       terminal = false;
       categories = [ "Application" "Network" "WebBrowser" ];
       mimeType = [ "text/html" "text/xml" ];
