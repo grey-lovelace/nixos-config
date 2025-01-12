@@ -37,7 +37,7 @@
         "type": "github"
       }
     },
-    "nixpkgs2505": {
+    "nixpkgs2405": {
       "locked": {
         "lastModified": 1735563628,
         "narHash": "sha256-OnSAY7XDSx7CtDoqNh8jwVwh4xNL/2HaJxGjryLWzX8=",
@@ -57,7 +57,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "nixpkgs2505": "nixpkgs2505"
+        "nixpkgs2405": "nixpkgs2405"
       }
     }
   },

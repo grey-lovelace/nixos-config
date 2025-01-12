@@ -98,9 +98,10 @@
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "Meslo" ]; })
   ];
-  # List packages installed in system profile. To search, run:
   environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
+    # This doesn't work for now. Will launch apps with native Wayland support,
+    # but if running through Nvidia, will fail to launch apps like chrome and vscode
+    # NIXOS_OZONE_WL =  "1";
   };
   environment.systemPackages = [
     # terminal tools

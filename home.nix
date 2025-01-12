@@ -215,6 +215,14 @@
       categories = [ "Application" "Network" "WebBrowser" ];
       mimeType = [ "text/html" "text/xml" ];
     };
+    chromium-source-allies-wayland = {
+      name = "Source Allies Wayland (Chrome)";
+      genericName = "Web Browser";
+      exec = "chromium --new-window --profile-directory=\"Profile 1\" --ozone-platform=wayland";
+      terminal = false;
+      categories = [ "Application" "Network" "WebBrowser" ];
+      mimeType = [ "text/html" "text/xml" ];
+    };
   };
 
   # This value determines the home Manager release that your
