@@ -52,7 +52,6 @@
       switch-input-source-backward=[];
       switch-to-workspace-left=["<Control><Super>Left"];
       switch-to-workspace-right=["<Control><Super>Right"];
-      toggle-message-tray=[];
     };
     "org/gnome/settings-daemon/plugins/media-keys" = {
       home = ["<Super>e"];
@@ -100,6 +99,7 @@
     };
     "org/gnome/shell/keybindings" = {
       show-screenshot-ui=["<Control><Super>s"];
+      toggle-message-tray=[];
     };
     "org/gnome/shell/extensions/blur-my-shell/appfolder" = {
       brightness=0.6;

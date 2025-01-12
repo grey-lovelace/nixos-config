@@ -1,7 +1,7 @@
 # Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, nixpkgs2405, pkgs, ... }:
 
 {
   imports =
@@ -9,7 +9,7 @@
       ./hardware-configuration.nix
       ./hardware-configuration-base.nix 
       ./kanata.nix
-      ./nvidia.nix
+      ./nvidia-egpu.nix
       ./gaming.nix
     ];
 
@@ -55,7 +55,7 @@
 
   # Enable the X11 windowing system.
   #  services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "amdgpu" "nvidia" ];
+  services.xserver.videoDrivers = [ "amdgpu" ];
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
@@ -102,51 +102,51 @@
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
   };
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = [
     # terminal tools
-    neofetch
-    dconf
-    wget
-    wl-clipboard
-    lshw
+    pkgs.neofetch
+    pkgs.dconf
+    pkgs.wget
+    pkgs.wl-clipboard
+    pkgs.lshw
 
     # developer tools
-    git
-    nodejs_23
-    deno
-    jdk23
-    python314
-    poetry
-    gcc
-    vscode
-    awscli2
-    aws-sam-cli
-    gnumake
-    bruno
+    pkgs.git
+    pkgs.nodejs_23
+    pkgs.deno
+    pkgs.jdk23
+    pkgs.python314
+    pkgs.poetry
+    pkgs.gcc
+    pkgs.vscode
+    pkgs.awscli2
+    pkgs.aws-sam-cli
+    pkgs.gnumake
+    pkgs.bruno
 
     # apps
-    (chromium.override { enableWideVine = true; })
-    obs-studio
-    slack
-    ardour
-    vlc
-    gimp
-    blender
-    godot_4
-    discord
+    (pkgs.chromium.override { enableWideVine = true; })
+    pkgs.obs-studio
+    pkgs.slack
+    nixpkgs2405.ardour
+    pkgs.vlc
+    pkgs.gimp
+    pkgs.blender
+    pkgs.godot_4
+    pkgs.discord
 
     # gnome
-    gnome-extension-manager
-    gnome-tweaks
+    pkgs.gnome-extension-manager
+    pkgs.gnome-tweaks
 
     # gnome extensions
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.burn-my-windows
-    gnomeExtensions.desktop-cube
-    gnomeExtensions.vscode-search-provider
-    gnomeExtensions.tactile
-    gnomeExtensions.clipboard-indicator
-    gnomeExtensions.display-configuration-switcher
+    pkgs.gnomeExtensions.blur-my-shell
+    pkgs.gnomeExtensions.burn-my-windows
+    pkgs.gnomeExtensions.desktop-cube
+    pkgs.gnomeExtensions.vscode-search-provider
+    pkgs.gnomeExtensions.tactile
+    pkgs.gnomeExtensions.clipboard-indicator
+    pkgs.gnomeExtensions.display-configuration-switcher
   ];
 
   # Perform garbage collection weekly to maintain low disk usage

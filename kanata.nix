@@ -32,6 +32,7 @@
     enable = true;
     keyboards = {
       internalKeyboard = {
+        # Instead, use the built in device recognition to target all keyboards
         # devices = [
         #   "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
         #   "/dev/input/by-path/pci-0000:00:14.0-usb-0:3:1.0-event-kbd"
