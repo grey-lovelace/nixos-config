@@ -11,5 +11,18 @@
 
     environment.systemPackages = with pkgs; [
         heroic
+        dolphin-emu
+        (retroarch.override {
+            cores = with libretro; [
+            citra
+            snes9x
+            desmume
+            dolphin
+            gambatte
+            mupen64plus
+            ppsspp
+            
+            ];
+        })
     ];
 }
