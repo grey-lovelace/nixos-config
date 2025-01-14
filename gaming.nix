@@ -22,6 +22,8 @@
                 gambatte
                 mupen64plus
                 ppsspp
+                pcsx-rearmed
+                pcsx2
             ];
         })
     ];
