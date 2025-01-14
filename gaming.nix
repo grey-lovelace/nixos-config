@@ -12,16 +12,16 @@
     environment.systemPackages = with pkgs; [
         heroic
         dolphin-emu
+        ryujinx
         (retroarch.override {
             cores = with libretro; [
-            citra
-            snes9x
-            desmume
-            dolphin
-            gambatte
-            mupen64plus
-            ppsspp
-            
+                citra
+                snes9x
+                desmume
+                dolphin
+                gambatte
+                mupen64plus
+                ppsspp
             ];
         })
     ];
