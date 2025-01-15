@@ -135,6 +135,7 @@
     pkgs.blender
     pkgs.godot_4
     pkgs.discord
+    pkgs.ffmpeg
 
     # gnome
     pkgs.gnome-extension-manager
