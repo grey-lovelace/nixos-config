@@ -110,6 +110,7 @@
     pkgs.wget
     pkgs.wl-clipboard
     pkgs.lshw
+    pkgs.youtube-dl
 
     # developer tools
     pkgs.git
