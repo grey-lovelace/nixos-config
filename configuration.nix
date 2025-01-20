@@ -136,8 +136,8 @@
     pkgs.blender
     pkgs.godot_4
     pkgs.discord
-    pkgs.kdenlive
-    pkgs.shotcut
+    pkgs.kdePackages.kdenlive
+    pkgs.kdePackages.breeze
 
     # gnome
     pkgs.gnome-extension-manager
