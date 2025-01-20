@@ -137,6 +137,7 @@
     pkgs.godot_4
     pkgs.discord
     pkgs.kdenlive
+    pkgs.shotcut
 
     # gnome
     pkgs.gnome-extension-manager
