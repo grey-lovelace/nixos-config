@@ -88,6 +88,11 @@
     packages = with pkgs; [];
   };
 
+  services.displayManager.autoLogin = {
+    enable = true;
+    user = "grey";
+  };
+
   security.pam.loginLimits = [
     { domain = "@audio"; item = "memlock"; type = "-"; value = "unlimited"; }
     { domain = "@audio"; item = "rtprio"; type = "-"; value = "99"; }
