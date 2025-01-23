@@ -88,10 +88,11 @@
     packages = with pkgs; [];
   };
 
-  services.displayManager.autoLogin = {
-    enable = true;
-    user = "grey";
-  };
+  # Seems to cause problems on startup, and need to log in anyway for gnome accounts
+  # services.displayManager.autoLogin = {
+  #   enable = true;
+  #   user = "grey";
+  # };
 
   security.pam.loginLimits = [
     { domain = "@audio"; item = "memlock"; type = "-"; value = "unlimited"; }
