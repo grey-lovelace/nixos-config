@@ -129,6 +129,7 @@
     pkgs.vscode
     pkgs.awscli2
     pkgs.aws-sam-cli
+    pkgs.azure-cli
     pkgs.gnumake
     pkgs.bruno
     pkgs.terraform
