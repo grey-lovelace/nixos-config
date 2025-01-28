@@ -171,7 +171,9 @@
 
   services.ollama = {
     enable = true;
-    loadModels = [];
+    loadModels = [
+      "deepseek-r1:7b"
+    ];
   };
 
   # Some programs need SUID wrappers, can be configured further or are
