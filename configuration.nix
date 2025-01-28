@@ -131,6 +131,7 @@
     pkgs.aws-sam-cli
     pkgs.gnumake
     pkgs.bruno
+    pkgs.terraform
 
     # apps
     (pkgs.chromium.override { enableWideVine = true; })
