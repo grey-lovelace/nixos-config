@@ -157,6 +157,7 @@
     bashrcExtra = ''
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
       export AWS_DEFAULT_PROFILE=dev
+      export AWS_DEFAULT_REGION=us-east-1
     '';
 
     shellAliases = {
