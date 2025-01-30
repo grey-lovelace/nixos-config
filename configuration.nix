@@ -159,6 +159,7 @@
     pkgs.gnomeExtensions.tactile
     pkgs.gnomeExtensions.clipboard-indicator
     pkgs.gnomeExtensions.display-configuration-switcher
+    pkgs.gnomeExtensions.just-perfection
   ];
 
   # Perform garbage collection weekly to maintain low disk usage
