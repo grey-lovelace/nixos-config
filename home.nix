@@ -95,6 +95,7 @@
         "desktop-cube@schneegans.github.com"
         "clipboard-indicator@tudmotu.com"
         "display-configuration-switcher@knokelmaat.gitlab.com"
+        "just-perfection-desktop@just-perfection"
       ];
     };
     "org/gnome/shell/keybindings" = {
