@@ -136,6 +136,13 @@
       move-item-first=true;
       toggle-menu=["<Super>v"];
     };
+    "org/gnome/shell/extensions/just-perfection" = {
+      quick-settings-dark-mode=false;
+      weather=false;
+      ripple-box=false;
+      window-demands-attention-focus=true;
+      startup-status=0;
+    };
   };
 
   programs.git = {
