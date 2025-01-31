@@ -174,7 +174,7 @@
   services.ollama = {
     enable = true;
     loadModels = [
-      "deepseek-r1:13b"
+      "deepseek-r1:14b"
     ];
   };
 
