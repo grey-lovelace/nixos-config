@@ -21,4 +21,8 @@
       amdgpuBusId = "PCI:199:0:0";
     };
   };
+
+  environment.systemPackages = [
+    pkgs.nvtopPackages.nvidia
+  ];
 }

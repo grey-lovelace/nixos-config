@@ -121,6 +121,7 @@
     # developer tools
     pkgs.git
     pkgs.nodejs_23
+    pkgs.yarn
     pkgs.deno
     pkgs.jdk23
     pkgs.python314
