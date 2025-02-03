@@ -136,7 +136,10 @@
     pkgs.terraform
 
     # apps
-    (pkgs.chromium.override { enableWideVine = true; })
+    (pkgs.chromium.override {
+      enableWideVine = true;
+    })
+    pkgs.firefox
     pkgs.obs-studio
     pkgs.slack
     nixpkgs2405.ardour
