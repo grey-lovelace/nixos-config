@@ -134,6 +134,7 @@
     pkgs.gnumake
     pkgs.bruno
     pkgs.terraform
+    pkgs.duckdb
 
     # apps
     (pkgs.chromium.override {
@@ -150,6 +151,7 @@
     pkgs.discord
     pkgs.kdePackages.kdenlive
     pkgs.kdePackages.breeze
+    pkgs.bitwarden-desktop
 
     # gnome
     pkgs.gnome-extension-manager
