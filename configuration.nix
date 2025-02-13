@@ -151,9 +151,8 @@
     pkgs.discord
     pkgs.kdePackages.kdenlive
     pkgs.kdePackages.breeze
-    pkgs.kdePackages.kimageannotator
     pkgs.bitwarden-desktop
-    pkgs.krita
+    pkgs.flameshot
 
     # gnome
     pkgs.gnome-extension-manager
