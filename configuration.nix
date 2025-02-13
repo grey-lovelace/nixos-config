@@ -152,6 +152,7 @@
     pkgs.kdePackages.kdenlive
     pkgs.kdePackages.breeze
     pkgs.bitwarden-desktop
+    pkgs.pinta
 
     # gnome
     pkgs.gnome-extension-manager
