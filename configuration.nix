@@ -152,7 +152,6 @@
     pkgs.kdePackages.kdenlive
     pkgs.kdePackages.breeze
     pkgs.bitwarden-desktop
-    pkgs.flameshot
 
     # gnome
     pkgs.gnome-extension-manager
