@@ -11,6 +11,7 @@
 
     environment.systemPackages = with pkgs; [
         heroic
+        steam-rom-manager
         dolphin-emu
         ryujinx
         (retroarch.override {
