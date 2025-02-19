@@ -21,6 +21,7 @@
                 desmume
                 dolphin
                 gambatte
+                mgba
                 mupen64plus
                 ppsspp
                 pcsx-rearmed
