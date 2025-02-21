@@ -135,6 +135,8 @@
     pkgs.bruno
     pkgs.terraform
     pkgs.duckdb
+    pkgs.lazygit
+    pkgs.lazydocker
 
     # apps
     (pkgs.chromium.override {
