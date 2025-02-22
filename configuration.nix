@@ -1,7 +1,7 @@
 # Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, nixpkgs2405, pkgs, ... }:
+{ config, nixpkgs-unstable, nixpkgs2405, pkgs, ... }:
 
 {
   imports =
@@ -117,6 +117,7 @@
     pkgs.wl-clipboard
     pkgs.lshw
     pkgs.yt-dlp
+    nixpkgs-unstable.ghostty
 
     # developer tools
     pkgs.git

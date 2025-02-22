@@ -5,6 +5,9 @@
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixos-24.11";
     };
+    nixpkgs-unstable = {
+      url = "github:NixOS/nixpkgs/nixos-unstable";
+    };
     nixpkgs2405 = {
       url = "github:NixOS/nixpkgs/nixos-24.05";
     };
@@ -21,6 +24,9 @@
         specialArgs = {
           inherit inputs;
           nixpkgs2405 = import inputs.nixpkgs2405 {
+            system = "x86_64-linux";
+          };
+          nixpkgs-unstable = import inputs.nixpkgs-unstable {
             system = "x86_64-linux";
           };
         };
