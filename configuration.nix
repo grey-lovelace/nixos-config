@@ -156,6 +156,7 @@
     pkgs.kdePackages.breeze
     pkgs.bitwarden-desktop
     pkgs.gparted
+    pkgs.libreoffice
 
     # gnome
     pkgs.gnome-extension-manager
