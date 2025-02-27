@@ -157,6 +157,7 @@
     pkgs.bitwarden-desktop
     pkgs.gparted
     pkgs.libreoffice
+    pkgs.freetube
 
     # gnome
     pkgs.gnome-extension-manager
