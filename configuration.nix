@@ -128,7 +128,7 @@
     pkgs.python314
     pkgs.poetry
     pkgs.gcc
-    nixpkgs-unstable.vscode
+    pkgs.vscode
     pkgs.awscli2
     pkgs.aws-sam-cli
     pkgs.azure-cli

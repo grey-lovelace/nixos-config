@@ -25,9 +25,11 @@
           inherit inputs;
           nixpkgs2405 = import inputs.nixpkgs2405 {
             system = "x86_64-linux";
+            config.allowUnfree = true;
           };
           nixpkgs-unstable = import inputs.nixpkgs-unstable {
             system = "x86_64-linux";
+            config.allowUnfree = true;
           };
         };
         modules = [
