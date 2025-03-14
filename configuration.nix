@@ -111,53 +111,50 @@
   };
   environment.systemPackages = [
     # terminal tools
-    pkgs.neofetch
-    pkgs.dconf
-    pkgs.wget
-    pkgs.wl-clipboard
-    pkgs.lshw
-    pkgs.yt-dlp
+    nixpkgs-unstable.neofetch
+    nixpkgs-unstable.dconf
+    nixpkgs-unstable.wget
+    nixpkgs-unstable.wl-clipboard
+    nixpkgs-unstable.lshw
+    nixpkgs-unstable.yt-dlp
     nixpkgs-unstable.ghostty
 
     # developer tools
-    pkgs.git
-    pkgs.nodejs_23
-    pkgs.yarn
-    pkgs.deno
-    pkgs.jdk23
-    pkgs.python314
-    pkgs.poetry
-    pkgs.gcc
-    pkgs.vscode
-    pkgs.awscli2
-    pkgs.aws-sam-cli
-    pkgs.azure-cli
-    pkgs.gnumake
-    pkgs.bruno
-    pkgs.terraform
-    pkgs.duckdb
-    pkgs.lazygit
-    pkgs.lazydocker
+    nixpkgs-unstable.git
+    nixpkgs-unstable.nodejs_23
+    nixpkgs-unstable.yarn
+    nixpkgs-unstable.deno
+    nixpkgs-unstable.jdk23
+    nixpkgs-unstable.python314
+    nixpkgs-unstable.poetry
+    nixpkgs-unstable.gcc
+    nixpkgs-unstable.vscode
+    nixpkgs-unstable.awscli2
+    nixpkgs-unstable.aws-sam-cli
+    nixpkgs-unstable.azure-cli
+    nixpkgs-unstable.gnumake
+    nixpkgs-unstable.bruno
+    nixpkgs-unstable.terraform
+    nixpkgs-unstable.duckdb
+    nixpkgs-unstable.lazygit
+    nixpkgs-unstable.lazydocker
 
     # apps
-    (pkgs.chromium.override {
+    (nixpkgs-unstable.chromium.override {
       enableWideVine = true;
     })
-    pkgs.firefox
-    pkgs.obs-studio
-    pkgs.slack
-    nixpkgs2405.ardour
-    pkgs.vlc
-    pkgs.gimp
-    pkgs.blender
-    pkgs.godot_4
-    pkgs.discord
-    pkgs.kdePackages.kdenlive
-    pkgs.kdePackages.breeze
-    pkgs.bitwarden-desktop
-    pkgs.gparted
-    pkgs.libreoffice
-    pkgs.freetube
+    nixpkgs-unstable.obs-studio
+    nixpkgs-unstable.slack
+    nixpkgs-unstable.ardour
+    nixpkgs-unstable.vlc
+    nixpkgs-unstable.gimp
+    nixpkgs-unstable.blender
+    nixpkgs-unstable.godot_4
+    nixpkgs-unstable.discord
+    nixpkgs-unstable.kdePackages.kdenlive
+    nixpkgs-unstable.kdePackages.breeze
+    nixpkgs-unstable.bitwarden-desktop
+    nixpkgs-unstable.libreoffice
 
     # gnome
     pkgs.gnome-extension-manager
