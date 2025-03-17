@@ -208,30 +208,36 @@
     '';
   };
 
-  xdg.desktopEntries = {
-    chromium-personal = {
-      name = "Personal (Chrome)";
-      genericName = "Web Browser";
-      exec = "chromium --new-window --profile-directory=\"Default\"";
-      terminal = false;
-      categories = [ "Application" "Network" "WebBrowser" ];
-      mimeType = [ "text/html" "text/xml" ];
+  xdg = {
+    portal = {
+      enable = true;
+      config.common.default = "*";
     };
-    chromium-source-allies = {
-      name = "Source Allies (Chrome)";
-      genericName = "Web Browser";
-      exec = "chromium --new-window --profile-directory=\"Profile 1\"";
-      terminal = false;
-      categories = [ "Application" "Network" "WebBrowser" ];
-      mimeType = [ "text/html" "text/xml" ];
-    };
-    chromium-source-allies-wayland = {
-      name = "Source Allies Wayland (Chrome)";
-      genericName = "Web Browser";
-      exec = "chromium --new-window --profile-directory=\"Profile 1\" --ozone-platform=wayland";
-      terminal = false;
-      categories = [ "Application" "Network" "WebBrowser" ];
-      mimeType = [ "text/html" "text/xml" ];
+    desktopEntries = {
+      chromium-personal = {
+        name = "Personal (Chrome)";
+        genericName = "Web Browser";
+        exec = "chromium --new-window --profile-directory=\"Default\"";
+        terminal = false;
+        categories = [ "Application" "Network" "WebBrowser" ];
+        mimeType = [ "text/html" "text/xml" ];
+      };
+      chromium-source-allies = {
+        name = "Source Allies (Chrome)";
+        genericName = "Web Browser";
+        exec = "chromium --new-window --profile-directory=\"Profile 1\"";
+        terminal = false;
+        categories = [ "Application" "Network" "WebBrowser" ];
+        mimeType = [ "text/html" "text/xml" ];
+      };
+      chromium-source-allies-wayland = {
+        name = "Source Allies Wayland (Chrome)";
+        genericName = "Web Browser";
+        exec = "chromium --new-window --profile-directory=\"Profile 1\" --ozone-platform=wayland";
+        terminal = false;
+        categories = [ "Application" "Network" "WebBrowser" ];
+        mimeType = [ "text/html" "text/xml" ];
+      };
     };
   };
 
