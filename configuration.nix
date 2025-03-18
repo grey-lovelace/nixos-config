@@ -138,6 +138,7 @@
     nixpkgs-unstable.duckdb
     nixpkgs-unstable.lazygit
     nixpkgs-unstable.lazydocker
+    nixpkgs-unstable.poppler_utils
 
     # apps
     (nixpkgs-unstable.chromium.override {
