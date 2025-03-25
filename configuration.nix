@@ -145,7 +145,7 @@
       enableWideVine = true;
     })
     nixpkgs-unstable.obs-studio
-    pkgs.slack
+    nixpkgs-unstable.slack
     nixpkgs-unstable.ardour
     nixpkgs-unstable.vlc
     nixpkgs-unstable.gimp
