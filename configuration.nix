@@ -193,6 +193,7 @@
     enable = true;
     wrapperFeatures.gtk = true;
   };
+  security.polkit.enable = true;
 
   programs.obs-studio = {
     enable = true;
