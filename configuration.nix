@@ -22,11 +22,11 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
-  boot.kernelModules = [
-    #  helpful for  obs virtual camera
-    "v4l2loopback"
-  ];
+  # boot.extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
+  # boot.kernelModules = [
+  #   #  helpful for  obs virtual camera
+  #   "v4l2loopback"
+  # ];
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -186,6 +186,12 @@
     loadModels = [
       "deepseek-r1:14b"
     ];
+  };
+
+  # enable Sway window manager
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;
   };
 
   programs.obs-studio = {
