@@ -144,7 +144,7 @@
     (nixpkgs-unstable.chromium.override {
       enableWideVine = true;
     })
-    nixpkgs-unstable.obs-studio
+    # nixpkgs-unstable.obs-studio
     nixpkgs-unstable.slack
     nixpkgs-unstable.ardour
     nixpkgs-unstable.vlc
@@ -185,6 +185,16 @@
     enable = true;
     loadModels = [
       "deepseek-r1:14b"
+    ];
+  };
+
+  programs.obs-studio = {
+    enable = true;
+    enableVirtualCamera = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+      obs-backgroundremoval
+      obs-pipewire-audio-capture
     ];
   };
 
