@@ -29,19 +29,19 @@
   home.packages = with pkgs; [
   ];
 
-  wayland.windowManager.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true; # Fixes common issues with GTK 3 apps
-    config = rec {
-      modifier = "Mod4";
-      # Use kitty as default terminal
-      # terminal = "kitty"; 
-      # startup = [
-      #   # Launch Firefox on start
-      #   {command = "firefox";}
-      # ];
-    };
-  };
+  # wayland.windowManager.sway = {
+  #   enable = true;
+  #   wrapperFeatures.gtk = true; # Fixes common issues with GTK 3 apps
+  #   config = rec {
+  #     modifier = "Mod4";
+  #     # Use kitty as default terminal
+  #     # terminal = "kitty"; 
+  #     # startup = [
+  #     #   # Launch Firefox on start
+  #     #   {command = "firefox";}
+  #     # ];
+  #   };
+  # };
 
 
   dconf.enable = true;
@@ -228,7 +228,7 @@
       # gtkUsePortal = true;
       extraPortals = with pkgs; [
         xdg-desktop-portal-gtk
-        pkgs.xdg-desktop-portal-wlr
+        xdg-desktop-portal-wlr
       ];
       config.common.default = "*";
     };

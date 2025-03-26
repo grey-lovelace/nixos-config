@@ -189,11 +189,11 @@
   };
 
   # enable Sway window manager
-  programs.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
-  };
-  security.polkit.enable = true;
+  # programs.sway = {
+  #   enable = true;
+  #   wrapperFeatures.gtk = true;
+  # };
+  # security.polkit.enable = true;
 
   programs.obs-studio = {
     enable = true;
