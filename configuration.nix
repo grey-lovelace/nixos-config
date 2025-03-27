@@ -157,6 +157,7 @@
     nixpkgs-unstable.kdePackages.breeze
     nixpkgs-unstable.bitwarden-desktop
     nixpkgs-unstable.libreoffice
+    nixpkgs-unstable.ffmpeg
 
     # gnome
     pkgs.gnome-extension-manager
