@@ -9,7 +9,7 @@
       ./hardware-configuration.nix
       ./hardware-configuration-base.nix 
       ./kanata.nix
-      ./nvidia-egpu.nix
+      # ./nvidia-egpu.nix
       ./gaming.nix
     ];
 
