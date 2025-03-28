@@ -17,8 +17,13 @@
     package = config.boot.kernelPackages.nvidiaPackages.latest;
     prime = {
       sync.enable = true;
+      # nix --experimental-features "flakes nix-command" run github:eclairevoyant/pcids
+      # WAYLAND
+      # nvidiaBusId = "PCI:197:0:0";
+      # amdgpuBusId = "PCI:199:0:0";
+      # 
       nvidiaBusId = "PCI:197:0:0";
-      amdgpuBusId = "PCI:199:0:0";
+      amdgpuBusId = "PCI:198:0:0";
     };
   };
 
