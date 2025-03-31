@@ -9,7 +9,7 @@
       ./hardware-configuration.nix
       ./hardware-configuration-base.nix 
       ./kanata.nix
-      # ./nvidia-egpu.nix
+      ./nvidia-egpu.nix
       ./gaming.nix
     ];
 
@@ -53,14 +53,15 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  
   services.xserver.videoDrivers = [ "amdgpu" ];
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.displayManager.gdm.wayland = false;
+  # Uncomment below to turn off Wayland
+  # services.xserver.enable = true;
+  # services.xserver.displayManager.gdm.wayland = false;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -140,6 +141,7 @@
     nixpkgs-unstable.lazygit
     nixpkgs-unstable.lazydocker
     nixpkgs-unstable.poppler_utils
+    nixpkgs-unstable.zoom-us
 
     # apps
     (nixpkgs-unstable.chromium.override {

@@ -249,6 +249,14 @@
         categories = [ "Application" "Network" "WebBrowser" ];
         mimeType = [ "text/html" "text/xml" ];
       };
+      chromium-fmh = {
+        name = "FMH (Chrome)";
+        genericName = "Web Browser";
+        exec = "chromium --new-window --profile-directory=\"Profile 2\"";
+        terminal = false;
+        categories = [ "Application" "Network" "WebBrowser" ];
+        mimeType = [ "text/html" "text/xml" ];
+      };
       # chromium-source-allies-wayland = {
       #   name = "Source Allies Wayland (Chrome)";
       #   genericName = "Web Browser";
