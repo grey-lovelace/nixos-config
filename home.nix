@@ -252,7 +252,7 @@
       chromium-fmh = {
         name = "FMH (Chrome)";
         genericName = "Web Browser";
-        exec = "chromium --new-window --profile-directory=\"Profile 2\"";
+        exec = "chromium --new-window --profile-directory=\"Profile 3\"";
         terminal = false;
         categories = [ "Application" "Network" "WebBrowser" ];
         mimeType = [ "text/html" "text/xml" ];
