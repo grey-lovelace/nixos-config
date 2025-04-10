@@ -34,8 +34,9 @@
       internalKeyboard = {
         # Instead, use the built in device recognition to target all keyboards
         devices = [
-          "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
-          "/dev/input/by-path/pci-0000:00:14.0-usb-0:3:1.0-event-kbd"
+          # Laptop Keyboard
+          # "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
+          # "/dev/input/by-path/pci-0000:00:14.0-usb-0:3:1.0-event-kbd"
         ];
         extraDefCfg = "process-unmapped-keys yes";
         config = ''
@@ -49,7 +50,11 @@
           )
           (defalias
             nav  (layer-toggle navigation)
-            escnav (tap-hold 200 200 esc @nav)
+            base (layer-switch base)
+            vanilla (layer-switch vanilla)
+            escvanilla (tap-dance 200 (esc esc @vanilla))
+            escbase (tap-dance 200 (esc esc @base))
+            escnavhold (tap-hold 200 200 esc @nav)
             spcsft (tap-hold 200 200 spc lsft)
             vdr M-C-right
             vdl M-C-left
@@ -57,10 +62,10 @@
             tabr C-pgdn
           )
           (deflayer base
-            esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
+            @escvanilla  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
             grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
             tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-            @escnav a    s    d    f    g    h    j    k    l    ;    '    ret
+            @escnavhold a    s    d    f    g    h    j    k    l    ;    '    ret
             lctl z    x    c    v    b    n    m    ,    .    /    grv
             lsft   lmet lalt           @spcsft       ralt rmet rctl
           )
@@ -71,6 +76,14 @@
             XX   XX   XX   XX   lctl XX  pgdn  left  up   down right XX   XX
             XX   XX   XX   XX   XX   XX  @tabl @tabr XX   XX   XX    XX
             XX   XX   XX             _               XX   XX   XX   
+          )
+          (deflayer vanilla
+            @escbase  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
+            grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+            tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+            caps a    s    d    f    g    h    j    k    l    ;    '    ret
+            lsft z    x    c    v    b    n    m    ,    .    /    rsft
+            lctl   lmet lalt           spc            ralt rmet rctl
           )
         '';
       };
