@@ -130,6 +130,7 @@
     nixpkgs-unstable.python314
     nixpkgs-unstable.poetry
     nixpkgs-unstable.uv
+    nixpkgs-unstable.cargo
     nixpkgs-unstable.gcc
     nixpkgs-unstable.vscode
     nixpkgs-unstable.awscli2
