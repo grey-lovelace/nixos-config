@@ -52,9 +52,11 @@
             nav  (layer-toggle navigation)
             base (layer-switch base)
             vanilla (layer-switch vanilla)
+            nums (layer-toggle nums)
             escvanilla (tap-dance 200 (esc esc @vanilla))
             escbase (tap-dance 200 (esc esc @base))
-            escnavhold (tap-hold 200 200 esc @nav)
+            escnavhold (tap-hold 100 100 esc @nav)
+            escnumnav (tap-dance 200 (@escnavhold @nums))
             spcsft (tap-hold 200 200 spc lsft)
             vdr M-C-right
             vdl M-C-left
@@ -65,7 +67,7 @@
             @escvanilla  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
             grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
             tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-            @escnavhold a    s    d    f    g    h    j    k    l    ;    '    ret
+            @escnumnav a    s    d    f    g    h    j    k    l    ;    '    ret
             lctl z    x    c    v    b    n    m    ,    .    /    grv
             lsft   lmet lalt           @spcsft       ralt rmet rctl
           )
@@ -75,6 +77,14 @@
             XX   @vdl @vdr XX   bspc del pgup  home  end  XX   XX    XX   XX   XX
             XX   XX   XX   XX   lctl XX  pgdn  left  up   down right XX   XX
             XX   XX   XX   XX   XX   XX  @tabl @tabr XX   XX   XX    XX
+            XX   XX   XX             _               XX   XX   XX   
+          )
+          (deflayer nums
+            XX   XX   XX   XX   XX   XX  XX    XX    XX   XX   XX    XX   XX   XX
+            XX   XX   XX   XX   XX   XX  XX    XX    XX   XX   XX    XX   XX   XX
+            XX   XX   XX   XX   XX   XX  5     6     7    8    9     XX   XX   XX
+            XX   XX   XX   XX   XX   XX  0     1     2    3    4     XX   XX
+            XX   XX   XX   XX   XX   XX  .     S-;   XX   XX   XX    XX
             XX   XX   XX             _               XX   XX   XX   
           )
           (deflayer vanilla

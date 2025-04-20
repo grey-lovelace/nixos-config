@@ -129,6 +129,7 @@
     nixpkgs-unstable.jdk23
     nixpkgs-unstable.python314
     nixpkgs-unstable.poetry
+    nixpkgs-unstable.uv
     nixpkgs-unstable.gcc
     nixpkgs-unstable.vscode
     nixpkgs-unstable.awscli2
