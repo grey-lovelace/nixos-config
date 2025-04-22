@@ -120,6 +120,7 @@
     nixpkgs-unstable.lshw
     nixpkgs-unstable.yt-dlp
     nixpkgs-unstable.ghostty
+    nixpkgs-unstable.qmk
 
     # developer tools
     nixpkgs-unstable.git
