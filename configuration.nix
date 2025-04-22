@@ -187,6 +187,7 @@
   };
 
   virtualisation.docker.enable = true;
+  hardware.keyboard.qmk.enable = true;
 
   services.ollama = {
     enable = true;
