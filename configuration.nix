@@ -164,6 +164,7 @@
     nixpkgs-unstable.bitwarden-desktop
     nixpkgs-unstable.libreoffice
     nixpkgs-unstable.ffmpeg
+    nixpkgs-unstable.ani-cli
 
     # gnome
     pkgs.gnome-extension-manager
@@ -194,6 +195,7 @@
     enable = true;
     loadModels = [
       "deepseek-r1:14b"
+      "qwen3:14b"
     ];
   };
 

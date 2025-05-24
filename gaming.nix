@@ -14,6 +14,8 @@
         steam-rom-manager
         dolphin-emu
         ryujinx
+        openrazer-daemon
+        polychromatic
         (retroarch.override {
             cores = with libretro; [
                 citra
