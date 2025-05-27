@@ -195,6 +195,7 @@
     enable = true;
     loadModels = [
       "deepseek-r1:14b"
+      "qwen3:14b"
     ];
   };
 
