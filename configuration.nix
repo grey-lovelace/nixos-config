@@ -73,8 +73,8 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
+  services.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -104,7 +104,7 @@
   ];
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "Meslo" ]; })
+    nerd-fonts.meslo-lg
   ];
   environment.sessionVariables = {
     # This doesn't work for now. Will launch apps with native Wayland support,
@@ -195,7 +195,6 @@
     enable = true;
     loadModels = [
       "deepseek-r1:14b"
-      "qwen3:14b"
     ];
   };
 

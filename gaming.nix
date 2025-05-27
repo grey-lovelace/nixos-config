@@ -16,19 +16,17 @@
         ryujinx
         openrazer-daemon
         polychromatic
-        (retroarch.override {
-            cores = with libretro; [
-                citra
-                snes9x
-                desmume
-                dolphin
-                gambatte
-                mgba
-                mupen64plus
-                ppsspp
-                pcsx-rearmed
-                pcsx2
-            ];
-        })
+        (retroarch.withCores (cores: with cores; [
+            citra
+            snes9x
+            desmume
+            dolphin
+            gambatte
+            mgba
+            mupen64plus
+            ppsspp
+            pcsx-rearmed
+            pcsx2
+        ]))
     ];
 }
