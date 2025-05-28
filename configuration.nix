@@ -58,10 +58,10 @@
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.gdm.wayland = true;
   services.xserver.desktopManager.gnome.enable = true;
   # Uncomment below to turn off Wayland
   # services.xserver.enable = true;
-  # services.xserver.displayManager.gdm.wayland = false;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -203,6 +203,10 @@
       "qwen3:14b"
     ];
   };
+
+  systemd.tmpfiles.rules = [
+    ''f+ /run/gdm/.config/monitors.xml - gdm gdm - <monitors version="2"><configuration><layoutmode>physical</layoutmode><logicalmonitor><x>0</x><y>0</y><scale>1</scale><primary>yes</primary><transform><rotation>upside_down</rotation><flipped>no</flipped></transform><monitor><monitorspec><connector>eDP-1</connector><vendor>SDC</vendor><product>0x4166</product><serial>0x00000000</serial></monitorspec><mode><width>1920</width><height>1200</height><rate>60.001</rate></mode></monitor></logicalmonitor></configuration><configuration><layoutmode>physical</layoutmode><logicalmonitor><x>0</x><y>0</y><scale>1</scale><monitor><monitorspec><connector>DisplayPort-2</connector><vendor>SGT</vendor><product>DP</product><serial>0x01010101</serial></monitorspec><mode><width>1920</width><height>1200</height><rate>59.885</rate></mode></monitor></logicalmonitor><logicalmonitor><x>0</x><y>1200</y><scale>1</scale><primary>yes</primary><transform><rotation>upside_down</rotation><flipped>no</flipped></transform><monitor><monitorspec><connector>eDP</connector><vendor>SDC</vendor><product>0x4166</product><serial>0x00000000</serial></monitorspec><mode><width>1920</width><height>1200</height><rate>60.001</rate></mode></monitor></logicalmonitor></configuration></monitors>''
+  ];
 
   # enable Sway window manager
   # programs.sway = {
