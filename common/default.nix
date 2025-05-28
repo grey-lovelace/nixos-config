@@ -19,5 +19,5 @@
   # services.xserver.dpi = 200;
 
   # Needed for desktop environments to detect/manage display brightness
-  hardware.sensor.iio.enable = lib.mkDefault true;
+  hardware.sensor.iio.enable = false;
 }

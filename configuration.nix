@@ -221,6 +221,14 @@
     ];
   };
 
+  systemd.services.disableHardwareRotation = {
+    description = "Disable Hardware Screen Rotation";
+    wantedBy = [ "multi-user.target" ];
+    after = [ "network.target" ];
+    service.Type = "oneshot";
+    service.ExecStart = "/bin/sh -c 'echo 1234:5678 > /sys/bus/hid/drivers/hid-multitouch/unbind'";
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
