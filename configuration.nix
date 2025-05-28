@@ -109,7 +109,7 @@
   environment.sessionVariables = {
     # This doesn't work for now. Will launch apps with native Wayland support,
     # but if running through Nvidia, will fail to launch apps like chrome and vscode
-    # NIXOS_OZONE_WL =  "1";
+    NIXOS_OZONE_WL =  "1";
   };
   environment.systemPackages = [
     # terminal tools
@@ -121,6 +121,7 @@
     nixpkgs-unstable.yt-dlp
     nixpkgs-unstable.ghostty
     nixpkgs-unstable.qmk
+    nixpkgs-unstable.xorg.xlsclients
 
     # developer tools
     nixpkgs-unstable.git
