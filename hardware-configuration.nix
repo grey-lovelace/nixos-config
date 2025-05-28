@@ -41,8 +41,8 @@ in
 
     # Set the framebuffer or video parameters for display rotation
     boot.kernelParams = [
-      "video=eDP-1"  # Replace with correct resolution and refresh rate for your display
-      "fbcon=rotate:2"            # Rotate the display 90 degrees (other options: 0 = normal, 1 = 90 degrees, 2 = 180 degrees, 3 = 270 degrees)
+      "video=eDP-1,panel_orientation=upside_down"
+      "i2c_touchscreen_props=GXTP7380:touchscreen-inverted-x:touchscreen-inverted-y"
     ];
 
     boot.kernelPackages = pkgs.linuxPackages_6_12;
