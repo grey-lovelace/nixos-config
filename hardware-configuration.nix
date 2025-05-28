@@ -41,7 +41,8 @@ in
 
     # Set the framebuffer or video parameters for display rotation
     boot.kernelParams = [
-      "video=eDP-1,panel_orientation=upside_down"
+      "video=eDP-1:1920X1200,panel_orientation=upside_down"
+      "video=DP-3:1920X1200"
       "i2c_touchscreen_props=GXTP7380:touchscreen-inverted-x:touchscreen-inverted-y"
     ];
 

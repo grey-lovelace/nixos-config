@@ -1,4 +1,4 @@
-{ lib, config, ... }: {
+{ lib, config, ... }: with lib; {
   imports = [
     ./cpu/amd
     ./cpu/amd/pstate.nix

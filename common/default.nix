@@ -15,9 +15,6 @@
   # For fingerprint support
   services.fprintd.enable = lib.mkDefault true;
 
-  # Fix font sizes in X
-  # services.xserver.dpi = 200;
-
   # Needed for desktop environments to detect/manage display brightness
-  hardware.sensor.iio.enable = false;
+  hardware.sensor.iio.enable = true;
 }
