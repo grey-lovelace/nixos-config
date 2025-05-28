@@ -192,6 +192,14 @@
   virtualisation.docker.enable = true;
   hardware.keyboard.qmk.enable = true;
 
+  services.fprintd = {
+    enable = true;
+    tod = {
+      enable = true;
+      driver = nixpkgs-unstable.libfprint-2-tod1-goodix;
+    };
+  };
+
   services.ollama = {
     enable = true;
     loadModels = [
