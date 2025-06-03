@@ -114,6 +114,7 @@
   environment.sessionVariables = {
     # This doesn't work for now. Will launch apps with native Wayland support,
     # but if running through Nvidia, will fail to launch apps like chrome and vscode
+    # UPDATE seems to be working now after updating to 25+. Keeping an eye on this.
     NIXOS_OZONE_WL =  "1";
   };
   environment.systemPackages = [
@@ -127,8 +128,6 @@
     nixpkgs-unstable.ghostty
     nixpkgs-unstable.qmk
     nixpkgs-unstable.libinput
-    nixpkgs-unstable.libdvdnav
-    nixpkgs-unstable.libdvdread
 
     # developer tools
     nixpkgs-unstable.git
@@ -154,6 +153,8 @@
     nixpkgs-unstable.lazydocker
     nixpkgs-unstable.poppler_utils
     nixpkgs-unstable.zoom-us
+    nixpkgs-unstable.flameshot
+    nixpkgs-unstable.kazam
 
     # apps
     (nixpkgs-unstable.chromium.override {
@@ -173,6 +174,10 @@
     nixpkgs-unstable.libreoffice
     nixpkgs-unstable.ffmpeg
     nixpkgs-unstable.ani-cli
+
+    # VLC encoding/conversion
+    nixpkgs-unstable.libdvdnav
+    nixpkgs-unstable.libdvdread
 
     # gnome
     pkgs.gnome-extension-manager
@@ -212,6 +217,7 @@
   };
 
   systemd.tmpfiles.rules = [
+    # Make Gnome login screen right side up on the native laptop screen. This only is in effect when no user is currently logged in.
     ''f+ /run/gdm/.config/monitors.xml - gdm gdm - <monitors version="2"><configuration><layoutmode>physical</layoutmode><logicalmonitor><x>0</x><y>0</y><scale>1</scale><primary>yes</primary><transform><rotation>upside_down</rotation><flipped>no</flipped></transform><monitor><monitorspec><connector>eDP-1</connector><vendor>SDC</vendor><product>0x4166</product><serial>0x00000000</serial></monitorspec><mode><width>1920</width><height>1200</height><rate>60.001</rate></mode></monitor></logicalmonitor></configuration></monitors>''
   ];
 
