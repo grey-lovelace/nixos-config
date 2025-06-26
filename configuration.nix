@@ -180,18 +180,18 @@
     nixpkgs-unstable.libdvdread
 
     # gnome
-    nixpkgs-unstable.gnome-extension-manager
-    nixpkgs-unstable.gnome-tweaks
+    pkgs.gnome-extension-manager
+    pkgs.gnome-tweaks
 
     # gnome extensions
-    # nixpkgs-unstable.gnomeExtensions.blur-my-shell
-    nixpkgs-unstable.gnomeExtensions.burn-my-windows
-    nixpkgs-unstable.gnomeExtensions.desktop-cube
-    nixpkgs-unstable.gnomeExtensions.vscode-search-provider
-    nixpkgs-unstable.gnomeExtensions.tactile
-    nixpkgs-unstable.gnomeExtensions.clipboard-indicator
-    nixpkgs-unstable.gnomeExtensions.display-configuration-switcher
-    nixpkgs-unstable.gnomeExtensions.just-perfection
+    # pkgs.gnomeExtensions.blur-my-shell
+    pkgs.gnomeExtensions.burn-my-windows
+    pkgs.gnomeExtensions.desktop-cube
+    pkgs.gnomeExtensions.vscode-search-provider
+    pkgs.gnomeExtensions.tactile
+    pkgs.gnomeExtensions.clipboard-indicator
+    pkgs.gnomeExtensions.display-configuration-switcher
+    pkgs.gnomeExtensions.just-perfection
   ];
 
   # Perform garbage collection weekly to maintain low disk usage
