@@ -57,7 +57,7 @@
             escbase (tap-dance 200 (esc esc @base))
             escnavhold (tap-hold 100 100 esc @nav)
             escnumnav (tap-dance 200 (@escnavhold @nums))
-            spcsft (tap-hold 100 100 spc lsft)
+            spcsft (tap-hold 150 150 spc lsft)
             vdr M-C-right
             vdl M-C-left
             tabl C-pgup
