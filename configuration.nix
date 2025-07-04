@@ -131,7 +131,7 @@
 
     # developer tools
     nixpkgs-unstable.git
-    nixpkgs-unstable.nodejs_23
+    nixpkgs-unstable.nodejs_24
     nixpkgs-unstable.yarn
     nixpkgs-unstable.deno
     nixpkgs-unstable.jdk23
