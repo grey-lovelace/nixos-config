@@ -33,9 +33,10 @@ with lib; {
     #   # https://community.frame.work/t/tracking-framework-amd-ryzen-7040-series-lid-wakeup-behavior-feedback/39128/45
     #   ACTION=="add", SUBSYSTEM=="serio", DRIVERS=="atkbd", ATTR{power/wakeup}="disabled"
     # '';
-    # Try to disable second screen touch capabilities
+    # Disable touch capabilities
     services.udev.extraRules = ''
       ACTION!="remove", KERNEL=="event[0-9]*", ENV{ID_VENDOR_ID}=="4c4a", ENV{ID_MODEL_ID}=="4155", ENV{LIBINPUT_IGNORE_DEVICE}="1"
+      ACTION!="remove", KERNEL=="event[0-9]*", ENV{ID_VENDOR_ID}=="0911", ENV{ID_MODEL_ID}=="5288", ENV{LIBINPUT_IGNORE_DEVICE}="1"
     '';
   
     # Replace 'left' with 'right' or 'inverted' as needed
