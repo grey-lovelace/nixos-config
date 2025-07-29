@@ -158,7 +158,6 @@
     (nixpkgs-unstable.chromium.override {
       enableWideVine = true;
     })
-    # nixpkgs-unstable.obs-studio
     nixpkgs-unstable.slack
     nixpkgs-unstable.ardour
     nixpkgs-unstable.vlc
@@ -174,6 +173,7 @@
     nixpkgs-unstable.libreoffice
     nixpkgs-unstable.ffmpeg
     nixpkgs-unstable.ani-cli
+    nixpkgs-unstable.open-webui
 
     # VLC encoding/conversion
     nixpkgs-unstable.libdvdnav
