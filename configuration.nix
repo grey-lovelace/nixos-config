@@ -173,7 +173,7 @@
     nixpkgs-unstable.libreoffice
     nixpkgs-unstable.ffmpeg
     nixpkgs-unstable.ani-cli
-    nixpkgs-unstable.open-webui
+    # nixpkgs-unstable.open-webui
 
     # VLC encoding/conversion
     nixpkgs-unstable.libdvdnav
@@ -214,6 +214,10 @@
       "deepseek-r1:14b"
       "qwen3:14b"
     ];
+  };
+
+  services.open-webui = {
+    enable = true;
   };
 
   systemd.tmpfiles.rules = [
