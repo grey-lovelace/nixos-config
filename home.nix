@@ -189,6 +189,8 @@
       ns="npm run start";
       dockerkill="docker kill $(docker ps -q)";
       gc="git commit -m $*";
+      touchon="echo 0018:27C6:0113.0001 | sudo tee /sys/bus/hid/drivers/hid-multitouch/bind";
+      touchoff="echo 0018:27C6:0113.0001 | sudo tee /sys/bus/hid/drivers/hid-multitouch/unbind";
     };
     initExtra = ''
       nixr() {
