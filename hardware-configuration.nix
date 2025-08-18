@@ -40,7 +40,7 @@ with lib; {
     systemd.services.turn-off-touchscreen = {
       wantedBy = [ "multi-user.target" ];
       enable = true;
-      script = ''echo 0018:27C6:0113.0001 | tee /sys/bus/hid/drivers/hid-multitouch/unbind'';
+      script = ''echo 0018:27C6:0113.0001 | tee /sys/bus/hid/drivers/hid-multitouch/unbind || true'';
       serviceConfig = {
         User = "root";
         Group = "root";

@@ -153,6 +153,7 @@
     nixpkgs-unstable.lazydocker
     nixpkgs-unstable.poppler_utils
     nixpkgs-unstable.zoom-us
+    nixpkgs-unstable.aider-chat
 
     # apps
     (nixpkgs-unstable.chromium.override {
