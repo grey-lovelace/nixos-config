@@ -191,6 +191,7 @@
       gc="git commit -m $*";
       touchon="echo 0018:27C6:0113.0001 | sudo tee /sys/bus/hid/drivers/hid-multitouch/bind";
       touchoff="echo 0018:27C6:0113.0001 | sudo tee /sys/bus/hid/drivers/hid-multitouch/unbind";
+      ai="aider --model bedrock/amazon.nova-pro-v1:0";
     };
     initExtra = ''
       nixr() {
