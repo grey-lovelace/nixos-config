@@ -135,7 +135,9 @@
     nixpkgs-unstable.yarn
     nixpkgs-unstable.deno
     nixpkgs-unstable.jdk23
-    nixpkgs-unstable.python314
+    (nixpkgs-unstable.python312.withPackages (python-pkgs: [
+      python-pkgs.boto3
+    ]))
     nixpkgs-unstable.poetry
     nixpkgs-unstable.uv
     nixpkgs-unstable.cargo
