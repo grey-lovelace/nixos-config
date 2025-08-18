@@ -135,9 +135,7 @@
     nixpkgs-unstable.yarn
     nixpkgs-unstable.deno
     nixpkgs-unstable.jdk23
-    (nixpkgs-unstable.python312.withPackages (python-pkgs: [
-      python-pkgs.boto3
-    ]))
+    nixpkgs-unstable.python314
     nixpkgs-unstable.poetry
     nixpkgs-unstable.uv
     nixpkgs-unstable.cargo
@@ -155,7 +153,7 @@
     nixpkgs-unstable.lazydocker
     nixpkgs-unstable.poppler_utils
     nixpkgs-unstable.zoom-us
-    nixpkgs-unstable.aider-chat
+    nixpkgs-unstable.aider-chat-with-bedrock
 
     # apps
     (nixpkgs-unstable.chromium.override {
