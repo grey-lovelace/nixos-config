@@ -9,6 +9,7 @@
         localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
     };
 
+    hardware.openrazer.enable = true;
     environment.systemPackages = with pkgs; [
         heroic
         steam-rom-manager
