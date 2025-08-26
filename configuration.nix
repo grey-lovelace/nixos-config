@@ -149,6 +149,7 @@
     nixpkgs-unstable.bruno
     nixpkgs-unstable.terraform
     nixpkgs-unstable.duckdb
+    nixpkgs-unstable.kind
     nixpkgs-unstable.lazygit
     nixpkgs-unstable.lazydocker
     nixpkgs-unstable.poppler_utils
