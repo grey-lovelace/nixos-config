@@ -143,8 +143,10 @@
     pkgs.gcc
     pkgs.vscode
     pkgs.awscli2
+    # TODO: Fails with "aws-lambda-builders==1.53.0 not satisfied by version 1.56.0"
     # pkgs.aws-sam-cli
-    pkgs.azure-cli
+    # TODO: Fails with "ModuleNotFoundError: No module named 'azure.multiapi.storage'"
+    # pkgs.azure-cli
     pkgs.gnumake
     pkgs.bruno
     pkgs.terraform
