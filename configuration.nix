@@ -144,7 +144,7 @@
     pkgs.vscode
     pkgs.awscli2
     # pkgs.aws-sam-cli
-    # pkgs.azure-cli
+    pkgs.azure-cli
     pkgs.gnumake
     pkgs.bruno
     pkgs.terraform
@@ -218,6 +218,7 @@
     ];
   };
 
+  # TODO: Failed with "Missing dependencies cython==3.1"
   # services.open-webui = {
   #   enable = true;
   # };
@@ -237,6 +238,7 @@
 
   programs.obs-studio = {
     enable = true;
+    # TODO: Was failing with "make: *** [Makefile:97: utils/v4l2loopback-ctl] Error 2"
     # enableVirtualCamera = true;
     plugins = with pkgs.obs-studio-plugins; [
       wlrobs
