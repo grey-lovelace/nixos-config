@@ -2,15 +2,15 @@
   description = "A simple NixOS flake";
 
   inputs = {
+    # nixpkgs = {
+    #   url = "github:NixOS/nixpkgs/nixos-25.05";
+    # };
     nixpkgs = {
-      url = "github:NixOS/nixpkgs/nixos-25.05";
-    };
-    nixpkgs-unstable = {
       url = "github:NixOS/nixpkgs/nixos-unstable";
     };
-    nixpkgs2405 = {
-      url = "github:NixOS/nixpkgs/nixos-24.05";
-    };
+    # nixpkgs2405 = {
+    #   url = "github:NixOS/nixpkgs/nixos-24.05";
+    # };
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,17 +21,17 @@
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = {
-          inherit inputs;
-          nixpkgs2405 = import inputs.nixpkgs2405 {
-            system = "x86_64-linux";
-            config.allowUnfree = true;
-          };
-          nixpkgs-unstable = import inputs.nixpkgs-unstable {
-            system = "x86_64-linux";
-            config.allowUnfree = true;
-          };
-        };
+        # specialArgs = {
+        #   inherit inputs;
+        #   nixpkgs2405 = import inputs.nixpkgs2405 {
+        #     system = "x86_64-linux";
+        #     config.allowUnfree = true;
+        #   };
+        #   nixpkgs-unstable = import inputs.nixpkgs-unstable {
+        #     system = "x86_64-linux";
+        #     config.allowUnfree = true;
+        #   };
+        # };
         modules = [
           ./configuration.nix
 

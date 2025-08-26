@@ -1,4 +1,4 @@
-{ config, lib, pkgs, nixpkgs-unstable, ... }:
+{ config, lib, pkgs, nixpkgs, ... }:
 {
 
   # Enable OpenGL
@@ -28,6 +28,6 @@
   };
 
   environment.systemPackages = [
-    nixpkgs-unstable.nvtopPackages.nvidia
+    nixpkgs.nvtopPackages.nvidia
   ];
 }

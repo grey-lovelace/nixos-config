@@ -1,7 +1,7 @@
 # Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, nixpkgs-unstable, nixpkgs2405, pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   imports =
@@ -119,67 +119,67 @@
   };
   environment.systemPackages = [
     # terminal tools
-    nixpkgs-unstable.neofetch
-    nixpkgs-unstable.dconf
-    nixpkgs-unstable.wget
-    nixpkgs-unstable.wl-clipboard
-    nixpkgs-unstable.lshw
-    nixpkgs-unstable.yt-dlp
-    nixpkgs-unstable.ghostty
-    nixpkgs-unstable.qmk
-    nixpkgs-unstable.libinput
+    pkgs.neofetch
+    pkgs.dconf
+    pkgs.wget
+    pkgs.wl-clipboard
+    pkgs.lshw
+    pkgs.yt-dlp
+    pkgs.ghostty
+    pkgs.qmk
+    pkgs.libinput
 
     # developer tools
-    nixpkgs-unstable.git
-    nixpkgs-unstable.nodejs_24
-    nixpkgs-unstable.yarn
-    nixpkgs-unstable.deno
-    nixpkgs-unstable.jdk23
-    nixpkgs-unstable.python314
-    nixpkgs-unstable.poetry
-    nixpkgs-unstable.uv
-    nixpkgs-unstable.cargo
-    nixpkgs-unstable.rustc
-    nixpkgs-unstable.gcc
-    nixpkgs-unstable.vscode
-    nixpkgs-unstable.awscli2
-    nixpkgs-unstable.aws-sam-cli
-    nixpkgs-unstable.azure-cli
-    nixpkgs-unstable.gnumake
-    nixpkgs-unstable.bruno
-    nixpkgs-unstable.terraform
-    nixpkgs-unstable.duckdb
-    nixpkgs-unstable.kind
-    nixpkgs-unstable.lazygit
-    nixpkgs-unstable.lazydocker
-    nixpkgs-unstable.poppler_utils
-    nixpkgs-unstable.zoom-us
-    nixpkgs-unstable.aider-chat-with-bedrock
+    pkgs.git
+    pkgs.nodejs_24
+    pkgs.yarn
+    pkgs.deno
+    pkgs.jdk23
+    pkgs.python314
+    pkgs.poetry
+    pkgs.uv
+    pkgs.cargo
+    pkgs.rustc
+    pkgs.gcc
+    pkgs.vscode
+    pkgs.awscli2
+    pkgs.aws-sam-cli
+    pkgs.azure-cli
+    pkgs.gnumake
+    pkgs.bruno
+    pkgs.terraform
+    pkgs.duckdb
+    pkgs.kind
+    pkgs.lazygit
+    pkgs.lazydocker
+    pkgs.poppler_utils
+    pkgs.zoom-us
+    pkgs.aider-chat-with-bedrock
 
     # apps
-    (nixpkgs-unstable.chromium.override {
+    (pkgs.chromium.override {
       enableWideVine = true;
     })
-    nixpkgs-unstable.slack
-    nixpkgs-unstable.ardour
-    nixpkgs-unstable.vlc
-    nixpkgs-unstable.gimp
-    nixpkgs-unstable.krita
-    nixpkgs-unstable.aseprite
-    nixpkgs-unstable.blender
-    nixpkgs-unstable.godot_4
-    nixpkgs-unstable.discord
-    nixpkgs-unstable.kdePackages.kdenlive
-    nixpkgs-unstable.kdePackages.breeze
-    nixpkgs-unstable.bitwarden-desktop
-    nixpkgs-unstable.libreoffice
-    nixpkgs-unstable.ffmpeg
-    nixpkgs-unstable.ani-cli
-    # nixpkgs-unstable.open-webui
+    pkgs.slack
+    pkgs.ardour
+    pkgs.vlc
+    pkgs.gimp
+    pkgs.krita
+    pkgs.aseprite
+    pkgs.blender
+    pkgs.godot_4
+    pkgs.discord
+    pkgs.kdePackages.kdenlive
+    pkgs.kdePackages.breeze
+    pkgs.bitwarden-desktop
+    pkgs.libreoffice
+    pkgs.ffmpeg
+    pkgs.ani-cli
+    # pkgs.open-webui
 
     # VLC encoding/conversion
-    nixpkgs-unstable.libdvdnav
-    nixpkgs-unstable.libdvdread
+    pkgs.libdvdnav
+    pkgs.libdvdread
 
     # gnome
     pkgs.gnome-extension-manager
