@@ -14,7 +14,8 @@
         heroic
         steam-rom-manager
         dolphin-emu
-        ryujinx
+        # ryujinx
+        # ryubing
         openrazer-daemon
         polychromatic
         (retroarch.withCores (cores: with cores; [
