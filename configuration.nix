@@ -57,9 +57,9 @@
   services.xserver.videoDrivers = [ "amdgpu" ];
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.displayManager.gdm.wayland = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
+  services.displayManager.gdm.wayland = true;
+  services.desktopManager.gnome.enable = true;
   # Uncomment below to turn off Wayland
   # services.xserver.enable = true;
 
@@ -143,8 +143,8 @@
     pkgs.gcc
     pkgs.vscode
     pkgs.awscli2
-    pkgs.aws-sam-cli
-    pkgs.azure-cli
+    # pkgs.aws-sam-cli
+    # pkgs.azure-cli
     pkgs.gnumake
     pkgs.bruno
     pkgs.terraform
@@ -154,7 +154,7 @@
     pkgs.lazydocker
     pkgs.poppler_utils
     pkgs.zoom-us
-    pkgs.aider-chat-with-bedrock
+    # pkgs.aider-chat-with-bedrock
 
     # apps
     (pkgs.chromium.override {
@@ -218,9 +218,9 @@
     ];
   };
 
-  services.open-webui = {
-    enable = true;
-  };
+  # services.open-webui = {
+  #   enable = true;
+  # };
 
   systemd.tmpfiles.rules = [
     # Make Gnome login screen right side up on the native laptop screen. This only is in effect when no user is currently logged in.
@@ -237,7 +237,7 @@
 
   programs.obs-studio = {
     enable = true;
-    enableVirtualCamera = true;
+    # enableVirtualCamera = true;
     plugins = with pkgs.obs-studio-plugins; [
       wlrobs
       obs-backgroundremoval
