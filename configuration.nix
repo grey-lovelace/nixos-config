@@ -156,6 +156,7 @@
     pkgs.lazydocker
     pkgs.poppler_utils
     pkgs.zoom-us
+    pkgs.openssl
     # pkgs.aider-chat-with-bedrock
 
     # apps
