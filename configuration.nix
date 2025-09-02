@@ -174,6 +174,7 @@
     pkgs.discord
     pkgs.kdePackages.kdenlive
     pkgs.kdePackages.breeze
+    pkgs.shotcut
     pkgs.bitwarden-desktop
     pkgs.libreoffice
     pkgs.ffmpeg
