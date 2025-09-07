@@ -11,7 +11,6 @@
         pkgs.gnome-tweaks
 
         # gnome extensions
-        # pkgs.gnomeExtensions.blur-my-shell
         pkgs.gnomeExtensions.burn-my-windows
         pkgs.gnomeExtensions.desktop-cube
         pkgs.gnomeExtensions.vscode-search-provider

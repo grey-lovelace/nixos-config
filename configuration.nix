@@ -225,7 +225,7 @@
   programs.obs-studio = {
     enable = true;
     # TODO: Was failing with "make: *** [Makefile:97: utils/v4l2loopback-ctl] Error 2"
-    # enableVirtualCamera = true;
+    enableVirtualCamera = true;
     plugins = with pkgs.obs-studio-plugins; [
       wlrobs
       obs-backgroundremoval
