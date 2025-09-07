@@ -23,18 +23,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # boot.extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
-  # boot.kernelModules = [
-  #   #  helpful for  obs virtual camera
-  #   "v4l2loopback"
-  # ];
-
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   # Enable networking
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
@@ -56,10 +44,6 @@
 
   
   services.xserver.videoDrivers = [ "amdgpu" ];
-
-  
-  # Uncomment below to turn off Wayland
-  # services.xserver.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -206,9 +190,9 @@
   };
 
   # TODO: Failed with "Missing dependencies cython==3.1"
-  # services.open-webui = {
-  #   enable = true;
-  # };
+  services.open-webui = {
+    enable = true;
+  };
 
   systemd.tmpfiles.rules = [
     # Make Gnome login screen right side up on the native laptop screen. This only is in effect when no user is currently logged in.
@@ -224,7 +208,6 @@
 
   programs.obs-studio = {
     enable = true;
-    # TODO: Was failing with "make: *** [Makefile:97: utils/v4l2loopback-ctl] Error 2"
     enableVirtualCamera = true;
     plugins = with pkgs.obs-studio-plugins; [
       wlrobs
@@ -233,26 +216,11 @@
     ];
   };
 
-  
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  # boot.extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
+  # boot.kernelModules = [
+  #   #  helpful for  obs virtual camera
+  #   "v4l2loopback"
+  # ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

@@ -4,6 +4,8 @@
     services.displayManager.gdm.enable = true;
     services.displayManager.gdm.wayland = true;
     services.desktopManager.gnome.enable = true;
+    # Uncomment below to turn off Wayland
+    # services.xserver.enable = true;
 
     environment.systemPackages = [
         # gnome
