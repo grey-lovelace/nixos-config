@@ -189,7 +189,6 @@
     ];
   };
 
-  # TODO: Failed with "Missing dependencies cython==3.1"
   services.open-webui = {
     enable = true;
   };
