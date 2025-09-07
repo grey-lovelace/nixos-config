@@ -11,7 +11,6 @@
       ./kanata.nix
       ./nvidia-egpu.nix
       ./gaming.nix
-      ./gnome.nix
     ];
 
   # Allow unfree packages
