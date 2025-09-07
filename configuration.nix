@@ -11,6 +11,7 @@
       ./kanata.nix
       ./nvidia-egpu.nix
       ./gaming.nix
+      ./gnome.nix
     ];
 
   # Allow unfree packages
@@ -56,10 +57,7 @@
   
   services.xserver.videoDrivers = [ "amdgpu" ];
 
-  # Enable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = true;
-  services.displayManager.gdm.wayland = true;
-  services.desktopManager.gnome.enable = true;
+  
   # Uncomment below to turn off Wayland
   # services.xserver.enable = true;
 
@@ -87,7 +85,6 @@
     pulse.enable = true;
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.grey = {
     isNormalUser = true;
     description = "Grey Lovelace";
@@ -184,20 +181,6 @@
     # VLC encoding/conversion
     pkgs.libdvdnav
     pkgs.libdvdread
-
-    # gnome
-    pkgs.gnome-extension-manager
-    pkgs.gnome-tweaks
-
-    # gnome extensions
-    # pkgs.gnomeExtensions.blur-my-shell
-    pkgs.gnomeExtensions.burn-my-windows
-    pkgs.gnomeExtensions.desktop-cube
-    pkgs.gnomeExtensions.vscode-search-provider
-    pkgs.gnomeExtensions.tactile
-    pkgs.gnomeExtensions.clipboard-indicator
-    pkgs.gnomeExtensions.display-configuration-switcher
-    pkgs.gnomeExtensions.just-perfection
   ];
 
   # Perform garbage collection weekly to maintain low disk usage
@@ -230,7 +213,6 @@
   systemd.tmpfiles.rules = [
     # Make Gnome login screen right side up on the native laptop screen. This only is in effect when no user is currently logged in.
     ''f+ /run/gdm/.config/monitors.xml - gdm gdm - ${builtins.readFile ./resources/initial_login_monitors.xml}''
-    # ''f+ /run/gdm/.config/monitors.xml - gdm gdm - <monitors version="2"><configuration><layoutmode>physical</layoutmode><logicalmonitor><x>0</x><y>0</y><scale>1</scale><primary>yes</primary><transform><rotation>upside_down</rotation><flipped>no</flipped></transform><monitor><monitorspec><connector>eDP-1</connector><vendor>SDC</vendor><product>0x4166</product><serial>0x00000000</serial></monitorspec><mode><width>1920</width><height>1200</height><rate>60.001</rate></mode></monitor></logicalmonitor></configuration></monitors>''
   ];
 
   # enable Sway window manager
