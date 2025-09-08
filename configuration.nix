@@ -1,7 +1,7 @@
 # Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, nixpkgs, nixpkgs-stable, ... }:
+{ config, pkgs, nixpkgs, ... }:
 
 {
   imports =
@@ -120,10 +120,8 @@
     pkgs.gcc
     pkgs.vscode
     pkgs.awscli2
-    # Unstable fails with "aws-lambda-builders==1.53.0 not satisfied by version 1.56.0"
-    nixpkgs-stable.aws-sam-cli
-    # Unstable fails with "ModuleNotFoundError: No module named 'azure.multiapi.storage'"
-    nixpkgs-stable.azure-cli
+    pkgs.aws-sam-cli
+    pkgs.azure-cli
     pkgs.gnumake
     pkgs.bruno
     pkgs.terraform
