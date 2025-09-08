@@ -113,6 +113,7 @@
         xdg-desktop-portal-gtk
         xdg-desktop-portal-wlr
         xdg-desktop-portal-cosmic
+        kdePackages.xdg-desktop-portal-kde
       ];
       config.common.default = "*";
     };
