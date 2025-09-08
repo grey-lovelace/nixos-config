@@ -93,12 +93,7 @@
   fonts.packages = with pkgs; [
     nerd-fonts.meslo-lg
   ];
-  environment.sessionVariables = {
-    # This doesn't work for now. Will launch apps with native Wayland support,
-    # but if running through Nvidia, will fail to launch apps like chrome and vscode
-    # UPDATE seems to be working now after updating to 25+. Keeping an eye on this.
-    NIXOS_OZONE_WL =  "1";
-  };
+  
   environment.systemPackages = [
     # terminal tools
     pkgs.neofetch
@@ -193,11 +188,6 @@
   services.open-webui = {
     enable = true;
   };
-
-  systemd.tmpfiles.rules = [
-    # Make Gnome login screen right side up on the native laptop screen. This only is in effect when no user is currently logged in.
-    ''f+ /run/gdm/.config/monitors.xml - gdm gdm - ${builtins.readFile ./resources/initial_login_monitors.xml}''
-  ];
 
   # enable Sway window manager
   # programs.sway = {

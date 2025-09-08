@@ -77,7 +77,7 @@
             XX   @vdl @vdr XX   bspc del pgup  home  end  XX   XX    XX   XX   XX
             XX   XX   XX   XX   lctl XX  pgdn  left  up   down right XX   XX
             XX   XX   XX   XX   XX   XX  @tabl @tabr XX   XX   XX    XX
-            XX   XX   XX             _               XX   XX   XX   
+            _    _    _              _               _    _    _   
           )
           (deflayer nums
             XX   XX   XX   XX   XX   XX  XX    XX    XX   XX   XX    XX   XX   XX
