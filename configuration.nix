@@ -206,10 +206,10 @@
 
   programs.ssh = {
     startAgent = true;
-    extraConfig = ''
-      Host *
-        AddKeysToAgent yes
-    '';
+    enableAskPassword = true;
+  };
+  environment.variables = {
+    SSH_ASKPASS_REQUIRE = "prefer";
   };
 
   programs.obs-studio = {
