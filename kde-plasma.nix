@@ -37,6 +37,7 @@
         kdiff3 # Compares and merges 2 or 3 files or directories
         wayland-utils # Wayland utilities
         hardinfo2 # System information and benchmarks for Linux systems
+        touchegg # Gesture recognizer and multitouch application
     ];
 
     # KDE Exclusions
