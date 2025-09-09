@@ -8,6 +8,11 @@
     # Uncomment below to turn off Wayland
     # services.xserver.enable = true;
 
+    services.displayManager.autoLogin = {
+        enable = true;
+        user = "grey";
+    };
+
     environment.sessionVariables = {
         # This doesn't work for now. Will launch apps with native Wayland support,
         # but if running through Nvidia, will fail to launch apps like chrome and vscode
