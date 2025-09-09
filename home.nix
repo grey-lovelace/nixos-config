@@ -34,6 +34,10 @@
     extraConfig = {
       init = {
         defaultBranch = "main";
+        # Sign all commits using ssh key
+        commit.gpgsign = true;
+        gpg.format = "ssh";
+        user.signingkey = "~/.ssh/personal.pub";
       };
     };
   };
