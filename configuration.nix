@@ -206,16 +206,16 @@
 
   programs.ssh = {
     startAgent = true;
-    enableAskPassword = true;
+    # enableAskPassword = true;
     extraConfig = ''
     # Test if github.com works with ssh for cloning
     Host github.com
     IdentityFile ~/.ssh/personal
     '';
   };
-  environment.variables = {
-    SSH_ASKPASS_REQUIRE = "prefer";
-  };
+  # environment.variables = {
+  #   SSH_ASKPASS_REQUIRE = "prefer";
+  # };
 
   programs.obs-studio = {
     enable = true;
