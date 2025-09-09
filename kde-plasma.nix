@@ -31,13 +31,13 @@
         kdePackages.kolourpaint # Easy-to-use paint program
         kdePackages.ksystemlog # KDE SystemLog Application
         kdePackages.sddm-kcm # Configuration module for SDDM
+        kdePackages.ksshaskpass # A Qt-based SSH password dialog
         kdiff3 # Compares and merges 2 or 3 files or directories
         kdePackages.isoimagewriter # Optional: Program to write hybrid ISO files onto USB disks
         kdePackages.partitionmanager # Optional: Manage the disk devices, partitions and file systems on your computer
         kdiff3 # Compares and merges 2 or 3 files or directories
         wayland-utils # Wayland utilities
         hardinfo2 # System information and benchmarks for Linux systems
-        touchegg # Gesture recognizer and multitouch application
     ];
 
     # KDE Exclusions
