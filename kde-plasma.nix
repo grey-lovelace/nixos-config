@@ -51,4 +51,6 @@
         kdePackages.ktorrent # Powerful BitTorrent client
         mpv
     ];
+
+    services.touchegg.enable = true;
 }
