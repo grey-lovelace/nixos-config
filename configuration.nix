@@ -204,7 +204,13 @@
   # };
   # security.polkit.enable = true;
 
-  programs.ssh.startAgent = true;
+  programs.ssh = {
+    startAgent = true;
+    extraConfig = ''
+      Host *
+        AddKeysToAgent yes
+    '';
+  };
 
   programs.obs-studio = {
     enable = true;
