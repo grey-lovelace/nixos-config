@@ -85,6 +85,7 @@
     extraGroups = [ "networkmanager" "wheel" "audio" "docker" ];
     packages = with pkgs; [];
   };
+  
 
   # Seems to cause problems on startup, and need to log in anyway for gnome accounts
   # services.displayManager.autoLogin = {
@@ -202,6 +203,8 @@
   #   wrapperFeatures.gtk = true;
   # };
   # security.polkit.enable = true;
+
+  programs.ssh.startAgent = true;
 
   programs.obs-studio = {
     enable = true;
