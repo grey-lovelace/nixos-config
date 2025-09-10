@@ -115,6 +115,7 @@
     pkgs.ghostty
     pkgs.qmk
     pkgs.libinput
+    pkgs.xorg.xlsclients
 
     # developer tools
     pkgs.git
