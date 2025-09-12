@@ -125,6 +125,7 @@
     pkgs.deno
     pkgs.jdk23
     pkgs.python314
+    pkgs.python3Packages.evdev
     pkgs.poetry
     pkgs.uv
     pkgs.cargo
