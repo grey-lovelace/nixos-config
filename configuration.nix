@@ -12,8 +12,8 @@
       ./nvidia-egpu.nix
       ./gaming.nix
       # ./cosmic.nix
-      # ./gnome.nix
-      ./kde-plasma.nix
+      ./gnome.nix
+      # ./kde-plasma.nix
     ];
 
   # Allow unfree packages

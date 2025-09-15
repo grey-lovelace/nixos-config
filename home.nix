@@ -5,7 +5,7 @@
   home.homeDirectory = "/home/grey";
 
   imports = [
-    # ./home-gnome.nix
+    ./home-gnome.nix
     ./oh-my-posh.nix
   ];
 
