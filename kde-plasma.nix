@@ -2,16 +2,16 @@
 
 { config, pkgs, ... }:
 {
-    # services.displayManager.sddm.enable = true;
-    # services.displayManager.sddm.wayland.enable = true;
+    services.displayManager.sddm.enable = true;
+    services.displayManager.sddm.wayland.enable = true;
     services.desktopManager.plasma6.enable = true;
     # Uncomment below to turn off Wayland
     # services.xserver.enable = true;
 
-    # services.displayManager.autoLogin = {
-    #     enable = true;
-    #     user = "grey";
-    # };
+    services.displayManager.autoLogin = {
+        enable = true;z
+        user = "grey";
+    };
 
     environment.sessionVariables = {
         # This doesn't work for now. Will launch apps with native Wayland support,

@@ -13,7 +13,7 @@
       ./gaming.nix
       # ./cosmic.nix
       ./gnome.nix
-      ./kde-plasma.nix
+      # ./kde-plasma.nix
     ];
 
   # Allow unfree packages
