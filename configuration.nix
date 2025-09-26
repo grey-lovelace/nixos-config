@@ -167,7 +167,7 @@
     pkgs.libreoffice
     pkgs.ffmpeg
     pkgs.ani-cli
-    pkgs.davinci-resolve
+    pkgs.inkscape
 
     # VLC encoding/conversion
     pkgs.libdvdnav
