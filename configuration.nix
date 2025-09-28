@@ -102,6 +102,7 @@
 
   fonts.packages = with pkgs; [
     nerd-fonts.meslo-lg
+    open-sans
   ];
   
   environment.systemPackages = [
