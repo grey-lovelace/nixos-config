@@ -11,7 +11,7 @@
       ./kanata.nix
       ./nvidia-egpu.nix
       ./gaming.nix
-      # ./cosmic.nix
+      ./cosmic.nix
       ./gnome.nix
       # ./kde-plasma.nix
     ];
