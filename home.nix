@@ -13,20 +13,6 @@
   home.packages = with pkgs; [
   ];
 
-  # wayland.windowManager.sway = {
-  #   enable = true;
-  #   wrapperFeatures.gtk = true; # Fixes common issues with GTK 3 apps
-  #   config = rec {
-  #     modifier = "Mod4";
-  #     # Use kitty as default terminal
-  #     # terminal = "kitty"; 
-  #     # startup = [
-  #     #   # Launch Firefox on start
-  #     #   {command = "firefox";}
-  #     # ];
-  #   };
-  # };
-
   programs.git = {
     enable = true;
     userName = "Grey Lovelace";
@@ -63,7 +49,6 @@
       gc="git commit -m $*";
       touchon="echo 0018:27C6:0113.0001 | sudo tee /sys/bus/hid/drivers/hid-multitouch/bind";
       touchoff="echo 0018:27C6:0113.0001 | sudo tee /sys/bus/hid/drivers/hid-multitouch/unbind";
-      ai="aider --model bedrock/amazon.nova-pro-v1:0";
     };
     initExtra = ''
       nixr() {
@@ -146,14 +131,6 @@
         categories = [ "Application" "Network" "WebBrowser" ];
         mimeType = [ "text/html" "text/xml" ];
       };
-      # chromium-source-allies-wayland = {
-      #   name = "Source Allies Wayland (Chrome)";
-      #   genericName = "Web Browser";
-      #   exec = "chromium --new-window --profile-directory=\"Profile 1\" --ozone-platform=wayland";
-      #   terminal = false;
-      #   categories = [ "Application" "Network" "WebBrowser" ];
-      #   mimeType = [ "text/html" "text/xml" ];
-      # };
     };
   };
 
