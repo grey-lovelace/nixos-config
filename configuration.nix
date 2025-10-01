@@ -161,6 +161,7 @@
     pkgs.ffmpeg
     pkgs.ani-cli
     pkgs.inkscape
+    pkgs.appimage-run
 
     # VLC encoding/conversion
     pkgs.libdvdnav
