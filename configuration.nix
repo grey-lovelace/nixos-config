@@ -139,6 +139,7 @@
     pkgs.poppler_utils
     pkgs.zoom-us
     pkgs.openssl
+    pkgs.go
 
     # apps
     (pkgs.chromium.override {
