@@ -159,6 +159,7 @@
     pkgs.shotcut
     pkgs.bitwarden-desktop
     pkgs.libreoffice
+    pkgs.onlyoffice-bin
     pkgs.ffmpeg
     pkgs.ani-cli
     pkgs.inkscape
