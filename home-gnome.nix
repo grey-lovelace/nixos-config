@@ -66,6 +66,7 @@
                 "clipboard-indicator@tudmotu.com"
                 "display-configuration-switcher@knokelmaat.gitlab.com"
                 "just-perfection-desktop@just-perfection"
+                "openbar@neuromorph"
             ];
         };
         "org/gnome/shell/keybindings" = {

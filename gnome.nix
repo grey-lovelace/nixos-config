@@ -32,5 +32,6 @@
         pkgs.gnomeExtensions.clipboard-indicator
         pkgs.gnomeExtensions.display-configuration-switcher
         pkgs.gnomeExtensions.just-perfection
+        pkgs.gnomeExtensions.open-bar
     ];
 }
