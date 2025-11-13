@@ -58,15 +58,14 @@
         };
         "org/gnome/shell" = {
             enabled-extensions=[
-                "blur-my-shell@aunetx"
-                "burn-my-windows@schneegans.github.com"
-                "tactile@lundal.io"
-                "vscode-search-provider@mrmarble.github.com"
-                "desktop-cube@schneegans.github.com"
-                "clipboard-indicator@tudmotu.com"
-                "display-configuration-switcher@knokelmaat.gitlab.com"
-                "just-perfection-desktop@just-perfection"
-                "openbar@neuromorph"
+                pkgs.gnomeExtensions.burn-my-windows.extensionUuid
+                pkgs.gnomeExtensions.desktop-cube.extensionUuid
+                pkgs.gnomeExtensions.vscode-search-provider.extensionUuid
+                pkgs.gnomeExtensions.tactile.extensionUuid
+                pkgs.gnomeExtensions.clipboard-indicator.extensionUuid
+                pkgs.gnomeExtensions.display-configuration-switcher.extensionUuid
+                pkgs.gnomeExtensions.just-perfection.extensionUuid
+                pkgs.gnomeExtensions.open-bar.extensionUuid
             ];
         };
         "org/gnome/shell/keybindings" = {

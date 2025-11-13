@@ -11,7 +11,7 @@
       ./kanata.nix
       ./nvidia-egpu.nix
       ./gaming.nix
-      ./cosmic.nix
+      # ./cosmic.nix
       ./gnome.nix
       # ./kde-plasma.nix
     ];
@@ -140,7 +140,7 @@
     pkgs.zoom-us
     pkgs.openssl
     pkgs.go
-    pkgs.glib
+    pkgs.glib.dev
 
     # apps
     (pkgs.chromium.override {
