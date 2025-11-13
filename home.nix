@@ -107,26 +107,34 @@
       config.common.default = "*";
     };
     desktopEntries = {
-      chromium-personal = {
-        name = "Personal (Chrome)";
+      brave-personal = {
+        name = "Personal (Brave)";
         genericName = "Web Browser";
-        exec = "chromium --new-window --profile-directory=\"Default\"";
+        exec = "brave --new-window --profile-directory=\"Profile 1\"";
         terminal = false;
         categories = [ "Application" "Network" "WebBrowser" ];
         mimeType = [ "text/html" "text/xml" ];
       };
-      chromium-source-allies = {
-        name = "Source Allies (Chrome)";
+      brave-source-allies = {
+        name = "Source Allies (Brave)";
         genericName = "Web Browser";
-        exec = "chromium --new-window --profile-directory=\"Profile 1\"";
+        exec = "brave --new-window --profile-directory=\"Profile 2\"";
         terminal = false;
         categories = [ "Application" "Network" "WebBrowser" ];
         mimeType = [ "text/html" "text/xml" ];
       };
-      chromium-fmh = {
-        name = "FMH (Chrome)";
+      brave-gateway = {
+        name = "Gateway (Brave)";
         genericName = "Web Browser";
-        exec = "chromium --new-window --profile-directory=\"Profile 3\"";
+        exec = "brave --new-window --profile-directory=\"Profile 3\"";
+        terminal = false;
+        categories = [ "Application" "Network" "WebBrowser" ];
+        mimeType = [ "text/html" "text/xml" ];
+      };
+      brave-hntb = {
+        name = "HNTB (Brave)";
+        genericName = "Web Browser";
+        exec = "brave --new-window --profile-directory=\"Profile 5\"";
         terminal = false;
         categories = [ "Application" "Network" "WebBrowser" ];
         mimeType = [ "text/html" "text/xml" ];
