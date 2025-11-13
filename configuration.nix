@@ -140,6 +140,7 @@
     pkgs.zoom-us
     pkgs.openssl
     pkgs.go
+    pkgs.glib
 
     # apps
     (pkgs.chromium.override {
