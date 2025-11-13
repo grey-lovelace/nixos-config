@@ -94,6 +94,11 @@
     '';
   };
 
+  home.file."Pictures/icons/personal.png".source = ./resources/personal.png;
+  home.file."Pictures/icons/source-allies.png".source = ./resources/source-allies.png;
+  home.file."Pictures/icons/gateway.png".source = ./resources/gateway.png;
+  home.file."Pictures/icons/hntb.png".source = ./resources/hntb.png;
+
   xdg = {
     portal = {
       enable = true;
@@ -114,6 +119,7 @@
         terminal = false;
         categories = [ "Application" "Network" "WebBrowser" ];
         mimeType = [ "text/html" "text/xml" ];
+        icon = "/home/grey/Pictures/icons/personal.png";
       };
       brave-source-allies = {
         name = "Source Allies (Brave)";
@@ -122,6 +128,7 @@
         terminal = false;
         categories = [ "Application" "Network" "WebBrowser" ];
         mimeType = [ "text/html" "text/xml" ];
+        icon = "/home/grey/Pictures/icons/source-allies.png";
       };
       brave-gateway = {
         name = "Gateway (Brave)";
@@ -130,6 +137,7 @@
         terminal = false;
         categories = [ "Application" "Network" "WebBrowser" ];
         mimeType = [ "text/html" "text/xml" ];
+        icon = "/home/grey/Pictures/icons/gateway.png";
       };
       brave-hntb = {
         name = "HNTB (Brave)";
@@ -138,6 +146,7 @@
         terminal = false;
         categories = [ "Application" "Network" "WebBrowser" ];
         mimeType = [ "text/html" "text/xml" ];
+        icon = "/home/grey/Pictures/icons/hntb.png";
       };
     };
   };
