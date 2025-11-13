@@ -164,6 +164,7 @@
     pkgs.ani-cli
     pkgs.inkscape
     pkgs.appimage-run
+    pkgs.brave
 
     # VLC encoding/conversion
     pkgs.libdvdnav
