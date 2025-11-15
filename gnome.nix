@@ -27,11 +27,12 @@
         # gnome extensions
         pkgs.gnomeExtensions.burn-my-windows
         pkgs.gnomeExtensions.desktop-cube
-        pkgs.gnomeExtensions.vscode-search-provider
+        # pkgs.gnomeExtensions.vscode-search-provider
         pkgs.gnomeExtensions.tactile
         pkgs.gnomeExtensions.clipboard-indicator
         pkgs.gnomeExtensions.display-configuration-switcher
         pkgs.gnomeExtensions.just-perfection
         pkgs.gnomeExtensions.open-bar
+        pkgs.gnomeExtensions.blur-my-shell
     ];
 }

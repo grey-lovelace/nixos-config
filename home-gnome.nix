@@ -60,12 +60,13 @@
             enabled-extensions=[
                 pkgs.gnomeExtensions.burn-my-windows.extensionUuid
                 pkgs.gnomeExtensions.desktop-cube.extensionUuid
-                pkgs.gnomeExtensions.vscode-search-provider.extensionUuid
+                # pkgs.gnomeExtensions.vscode-search-provider.extensionUuid
                 pkgs.gnomeExtensions.tactile.extensionUuid
                 pkgs.gnomeExtensions.clipboard-indicator.extensionUuid
                 pkgs.gnomeExtensions.display-configuration-switcher.extensionUuid
                 pkgs.gnomeExtensions.just-perfection.extensionUuid
                 pkgs.gnomeExtensions.open-bar.extensionUuid
+                pkgs.gnomeExtensions.blur-my-shell.extensionUuid
             ];
         };
         "org/gnome/shell/keybindings" = {

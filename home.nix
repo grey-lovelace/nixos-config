@@ -98,6 +98,7 @@
   home.file."Pictures/icons/source-allies.png".source = ./resources/source-allies.png;
   home.file."Pictures/icons/gateway.png".source = ./resources/gateway.png;
   home.file."Pictures/icons/hntb.png".source = ./resources/hntb.png;
+  home.file."Pictures/icons/curseforge.png".source = ./resources/curseforge.png;
 
   xdg = {
     portal = {
@@ -147,6 +148,14 @@
         categories = [ "Application" "Network" "WebBrowser" ];
         mimeType = [ "text/html" "text/xml" ];
         icon = "/home/grey/Pictures/icons/hntb.png";
+      };
+      curseforge = {
+        name = "CurseForge";
+        genericName = "CurseForge";
+        exec = "appimage-run \"~/Games/CurseForge-Setup-2.6.3.AppImage\"";
+        terminal = false;
+        categories = [ "Application" ];
+        icon = "/home/grey/Pictures/icons/curseforge.png";
       };
     };
   };
