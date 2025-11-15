@@ -152,9 +152,10 @@
       curseforge = {
         name = "CurseForge";
         genericName = "CurseForge";
-        exec = "appimage-run \"\\$HOME/Games/curseforge-latest-linux.AppImage\"";
+        exec = "appimage-run \\"\\$HOME/Games/curseforge-latest-linux.AppImage\\"";
         terminal = false;
         categories = [ "Application" ];
+        mimeType = [];
         icon = "/home/grey/Pictures/icons/curseforge.png";
       };
     };
