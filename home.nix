@@ -152,7 +152,7 @@
       curseforge = {
         name = "CurseForge";
         genericName = "CurseForge";
-        exec = "appimage-run \"~/Games/CurseForge-Setup-2.6.3.AppImage\"";
+        exec = "appimage-run \"~/Games/curseforge-latest-linux.AppImage\"";
         terminal = false;
         categories = [ "Application" ];
         icon = "/home/grey/Pictures/icons/curseforge.png";
