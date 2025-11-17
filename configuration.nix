@@ -166,6 +166,7 @@
     pkgs.inkscape
     pkgs.appimage-run
     pkgs.brave
+    pkgs.globalprotect-openconnect
 
     # VLC encoding/conversion
     pkgs.libdvdnav
