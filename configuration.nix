@@ -111,6 +111,7 @@
     pkgs.libinput
     pkgs.xorg.xlsclients
     pkgs.zip
+    pkgs.xclip
 
     # developer tools
     pkgs.git

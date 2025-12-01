@@ -60,7 +60,7 @@
             enabled-extensions=[
                 pkgs.gnomeExtensions.burn-my-windows.extensionUuid
                 pkgs.gnomeExtensions.desktop-cube.extensionUuid
-                # pkgs.gnomeExtensions.vscode-search-provider.extensionUuid
+                pkgs.gnomeExtensions.vscode-search-provider.extensionUuid # installed locally, but still need to enable here
                 pkgs.gnomeExtensions.tactile.extensionUuid
                 pkgs.gnomeExtensions.clipboard-indicator.extensionUuid
                 pkgs.gnomeExtensions.display-configuration-switcher.extensionUuid
