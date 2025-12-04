@@ -208,7 +208,7 @@
   # security.polkit.enable = true;
 
   programs.ssh = {
-    startAgent = true;
+    # startAgent = true;
     # enableAskPassword = true;
     extraConfig = ''
     # Test if github.com works with ssh for cloning
