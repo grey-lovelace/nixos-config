@@ -9,7 +9,7 @@
     # services.xserver.enable = true;
 
     services.displayManager.autoLogin = {
-        enable = true;z
+        enable = true;
         user = "grey";
     };
 

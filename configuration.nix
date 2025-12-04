@@ -118,7 +118,7 @@
     pkgs.nodejs_24
     pkgs.yarn
     pkgs.deno
-    pkgs.jdk23
+    pkgs.jdk25
     pkgs.python314
     pkgs.python3Packages.evdev
     pkgs.poetry
@@ -128,7 +128,7 @@
     pkgs.gcc
     pkgs.vscode
     pkgs.awscli2
-    pkgs.aws-sam-cli
+    # pkgs.aws-sam-cli
     pkgs.azure-cli
     pkgs.gnumake
     pkgs.bruno
@@ -137,7 +137,7 @@
     pkgs.kind
     pkgs.lazygit
     pkgs.lazydocker
-    pkgs.poppler_utils
+    pkgs.poppler-utils
     pkgs.zoom-us
     pkgs.openssl
     pkgs.go
@@ -161,13 +161,11 @@
     pkgs.shotcut
     pkgs.bitwarden-desktop
     pkgs.libreoffice
-    pkgs.onlyoffice-bin
     pkgs.ffmpeg
     pkgs.ani-cli
     pkgs.inkscape
     pkgs.appimage-run
     pkgs.brave
-    pkgs.globalprotect-openconnect
 
     # VLC encoding/conversion
     pkgs.libdvdnav

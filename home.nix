@@ -15,9 +15,9 @@
 
   programs.git = {
     enable = true;
-    userName = "Grey Lovelace";
-    userEmail = "austin.grey.lovelace@gmail.com";
-    extraConfig = {
+    settings = {
+      user.name = "Grey Lovelace";
+      user.email = "austin.grey.lovelace@gmail.com";
       init = {
         defaultBranch = "main";
         # Sign all commits using ssh key
