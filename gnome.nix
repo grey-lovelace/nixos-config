@@ -9,7 +9,7 @@
 
     systemd.tmpfiles.rules = [
         # Make Gnome login screen right side up on the native laptop screen. This only is in effect when no user is currently logged in.
-        ''f+ /run/gdm/.config/monitors.xml - gdm gdm - ${builtins.readFile ./resources/initial_login_monitors.xml}''
+        ''f+ /etc/xdg/monitors.xml - gdm gdm - ${builtins.readFile ./resources/initial_login_monitors.xml}''
     ];
 
     environment.sessionVariables = {
