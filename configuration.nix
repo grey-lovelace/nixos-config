@@ -190,10 +190,6 @@
     "xt_MASQUERADE"
   ];
 
-  # Enable IP forwarding for Docker networking
-  boot.kernel.sysctl = {
-    "net.ipv4.ip_forward" = 1;
-  };
   hardware.keyboard.qmk.enable = true;
 
   services.fprintd = {
