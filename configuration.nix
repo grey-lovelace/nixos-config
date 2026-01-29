@@ -11,7 +11,7 @@
       ./kanata.nix
       ./nvidia-egpu.nix
       ./gaming.nix
-      # ./cosmic.nix
+      ./cosmic.nix
       ./gnome.nix
       # ./kde-plasma.nix
     ];
@@ -106,7 +106,7 @@
     pkgs.wl-clipboard
     pkgs.lshw
     pkgs.yt-dlp
-    pkgs.ghostty
+    # pkgs.ghostty
     pkgs.qmk
     pkgs.libinput
     pkgs.xorg.xlsclients
