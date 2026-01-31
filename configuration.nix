@@ -11,7 +11,7 @@
       ./kanata.nix
       ./nvidia-egpu.nix
       ./gaming.nix
-      ./cosmic.nix
+      # ./cosmic.nix
       ./gnome.nix
       # ./kde-plasma.nix
     ];
@@ -167,6 +167,7 @@
     pkgs.appimage-run
     pkgs.brave
     pkgs.streamcontroller
+    pkgs.obsidian
 
     # VLC encoding/conversion
     pkgs.libdvdnav
