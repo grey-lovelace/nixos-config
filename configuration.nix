@@ -168,7 +168,7 @@
     pkgs.brave
     pkgs.streamcontroller
     pkgs.obsidian
-    pkgs.insync
+    pkgs.syncthing
 
     # VLC encoding/conversion
     pkgs.libdvdnav
