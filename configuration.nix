@@ -174,32 +174,32 @@
     pkgs.libdvdread
   ];
 
-  services.syncthing = {
-    enable = true;
-    user = "grey";
-    group = "syncthing";
-    overrideDevices = true;     # overrides any devices added or deleted through the WebUI
-    overrideFolders = true;     # overrides any folders added or deleted through the WebUI
-    openDefaultPorts = true; # Open ports in the firewall for Syncthing. (NOTE: this will not open syncthing gui port)
-    settings = {
-      devices = {
-        "laptop" = {
-          id = "3EOXNFP-AIH6LT5-GW3BTBJ-A2FRE32-EZVSHCJ-WTU5635-TY2Q7R7-WRCF2AE";
-          name = "Laptop";
-        };
-        "phone" = {
-          id = "L2ZEWF5-FOXL5X6-FH4574U-NJI3BA2-HDBVEPP-X7ZXDWC-3F5OSDZ-CCO24QM";
-          name = "Phone";
-        };
-      };
-      folders = {
-        "obsidian" = {
-          path = "/home/grey/Documents/obsidian";
-          devices = [ "laptop" "phone" ];
-        };
-      };
-    };
-  };
+  # services.syncthing = {
+  #   enable = true;
+  #   user = "grey";
+  #   group = "syncthing";
+  #   overrideDevices = true;     # overrides any devices added or deleted through the WebUI
+  #   overrideFolders = true;     # overrides any folders added or deleted through the WebUI
+  #   openDefaultPorts = true; # Open ports in the firewall for Syncthing. (NOTE: this will not open syncthing gui port)
+  #   settings = {
+  #     devices = {
+  #       "laptop" = {
+  #         id = "3EOXNFP-AIH6LT5-GW3BTBJ-A2FRE32-EZVSHCJ-WTU5635-TY2Q7R7-WRCF2AE";
+  #         name = "Laptop";
+  #       };
+  #       "phone" = {
+  #         id = "L2ZEWF5-FOXL5X6-FH4574U-NJI3BA2-HDBVEPP-X7ZXDWC-3F5OSDZ-CCO24QM";
+  #         name = "Phone";
+  #       };
+  #     };
+  #     folders = {
+  #       "obsidian" = {
+  #         path = "/home/grey/Documents/obsidian";
+  #         devices = [ "laptop" "phone" ];
+  #       };
+  #     };
+  #   };
+  # };
 
   # Perform garbage collection weekly to maintain low disk usage
   nix.gc = {
@@ -229,6 +229,7 @@
     loadModels = [
       "deepseek-r1:14b"
       "qwen3:14b"
+      "nomic-embed-text"
     ];
   };
 
