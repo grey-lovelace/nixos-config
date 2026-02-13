@@ -168,6 +168,7 @@
     pkgs.brave
     pkgs.streamcontroller
     pkgs.obsidian
+    pkgs.geary
 
     # VLC encoding/conversion
     pkgs.libdvdnav
