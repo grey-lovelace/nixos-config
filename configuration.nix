@@ -1,7 +1,7 @@
 # Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, nixpkgs, ... }:
+{ config, pkgs, nixpkgs, nixpkgs2411, ... }:
 
 {
   imports =
@@ -169,6 +169,7 @@
     pkgs.streamcontroller
     pkgs.obsidian
     pkgs.geary
+    nixpkgs2411.citrix_workspace
 
     # VLC encoding/conversion
     pkgs.libdvdnav
@@ -201,6 +202,11 @@
   #     };
   #   };
   # };
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    glibc
+  ];
 
   # Perform garbage collection weekly to maintain low disk usage
   nix.gc = {

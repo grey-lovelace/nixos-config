@@ -5,6 +5,9 @@
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixos-25.11";
     };
+    nixpkgs2411 = {
+      url = "github:NixOS/nixpkgs/nixos-24.11";
+    };
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -15,6 +18,12 @@
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = {
+          inherit inputs;
+          nixpkgs2411 = import inputs.nixpkgs2411 {
+            system = "x86_64-linux";
+          };
+        };
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
