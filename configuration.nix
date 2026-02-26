@@ -170,7 +170,7 @@
     pkgs.streamcontroller
     pkgs.obsidian
     pkgs.geary
-    # nixpkgs2411.citrix_workspace
+    nixpkgs2411.citrix_workspace
 
     # VLC encoding/conversion
     pkgs.libdvdnav
