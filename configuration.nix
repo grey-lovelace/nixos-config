@@ -115,6 +115,7 @@
 
     # developer tools
     pkgs.git
+    pkgs.github-cli
     pkgs.nodejs_24
     pkgs.yarn
     pkgs.deno
@@ -169,7 +170,7 @@
     pkgs.streamcontroller
     pkgs.obsidian
     pkgs.geary
-    nixpkgs2411.citrix_workspace
+    # nixpkgs2411.citrix_workspace
 
     # VLC encoding/conversion
     pkgs.libdvdnav
